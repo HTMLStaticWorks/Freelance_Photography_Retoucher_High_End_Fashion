@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RetouchStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="antialiased transition-colors duration-300">
+
+    <div class="flex h-screen w-full">
+        <!-- SECTION 1: Split-screen luxury hero -->
+        <div class="hidden lg:flex lg:w-1/2 relative bg-black items-center justify-center overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544365558-35aa4af4154c?auto=format&fit=crop&q=80&w=1200" alt="Login Banner" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay">
+            <div class="relative z-10 text-center text-white px-10">
+                <a href="index.html" class="font-serif text-4xl font-bold mb-6 block">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
+                <p class="font-serif text-2xl max-w-md mx-auto italic">"Perfection is not a luxury, it's our standard."</p>
+            </div>
+        </div>
+
+        <!-- Right Side: Forms -->
+        <div class="w-full lg:w-1/2 bg-white dark:bg-black flex flex-col items-center justify-center p-8 sm:p-12 relative">
+            
+            <div class="absolute top-8 right-8 space-x-4">
+                <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                    <i class="ph ph-moon text-xl dark:hidden text-black"></i>
+                    <i class="ph ph-sun text-xl hidden dark:block text-white"></i>
+                </button>
+                <a href="index.html" class="text-sm font-bold uppercase tracking-wider hover:text-gray-500">Back to Site</a>
+            </div>
+
+            <div class="w-full max-w-md" id="form-container">
+                
+                <!-- Toggle between Login/Register (Using simple JS for demo) -->
+                <div class="flex justify-center mb-10 border-b border-gray-200 dark:border-gray-800 pb-4">
+                    <button id="show-login" class="text-sm font-bold uppercase tracking-wider px-4 border-r border-gray-300 dark:border-gray-700 hover:text-gray-500 transition-colors">Login</button>
+                    <button id="show-register" class="text-sm font-bold uppercase tracking-wider px-4 text-gray-400 hover:text-black dark:hover:text-white transition-colors">Register</button>
+                </div>
+
+                <!-- SECTION 2: Login form -->
+                <div id="login-form" class="block animate-fade-in" data-aos="fade-up">
+                    <h2 class="font-serif text-4xl font-bold mb-2 text-center">Welcome Back</h2>
+                    <p class="text-gray-500 text-sm text-center mb-8">Enter your credentials to access the client portal.</p>
+                    
+                    <form class="space-y-6" action="dashboard.html">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Email Address</label>
+                            <input type="email" value="client@example.com" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-colors" required>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="block text-xs font-bold uppercase tracking-wider">Password</label>
+                                <a href="#" class="text-xs text-gray-500 hover:text-black dark:hover:text-white">Forgot Password?</a>
+                            </div>
+                            <input type="password" value="password123" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-colors" required>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wider py-4 rounded-lg hover:opacity-90 transition-opacity">Sign In</button>
+                    </form>
+
+                    <!-- SECTION 4: Social authentication section -->
+                    <div class="mt-8">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200 dark:border-gray-800"></div></div>
+                            <div class="relative flex justify-center text-xs"><span class="bg-white dark:bg-black px-4 text-gray-400 uppercase tracking-widest">Or continue with</span></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <button class="flex items-center justify-center px-4 py-3 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                                <i class="ph ph-google-logo text-xl mr-2"></i> <span class="text-sm font-bold">Google</span>
+                            </button>
+                            <button class="flex items-center justify-center px-4 py-3 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                                <i class="ph ph-apple-logo text-xl mr-2"></i> <span class="text-sm font-bold">Apple</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: Register form -->
+                <div id="register-form" class="hidden animate-fade-in">
+                    <h2 class="font-serif text-4xl font-bold mb-2 text-center">Create Account</h2>
+                    <p class="text-gray-500 text-sm text-center mb-8">Join RetouchStudio to manage your editorial assets.</p>
+                    
+                    <form class="space-y-6" action="dashboard.html">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider mb-2">First Name</label>
+                                <input type="text" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-colors" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-wider mb-2">Last Name</label>
+                                <input type="text" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-colors" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Email Address</label>
+                            <input type="email" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-colors" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider mb-2">Password</label>
+                            <input type="password" class="w-full bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white transition-colors" required>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white dark:bg-white dark:text-black font-bold uppercase tracking-wider py-4 rounded-lg hover:opacity-90 transition-opacity">Create Account</button>
+                    </form>
+                    
+                    <!-- Social authentication section -->
+                    <div class="mt-8">
+                        <div class="relative">
+                            <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200 dark:border-gray-800"></div></div>
+                            <div class="relative flex justify-center text-xs"><span class="bg-white dark:bg-black px-4 text-gray-400 uppercase tracking-widest">Or sign up with</span></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mt-6">
+                            <button class="flex items-center justify-center px-4 py-3 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                                <i class="ph ph-google-logo text-xl mr-2"></i> <span class="text-sm font-bold">Google</span>
+                            </button>
+                            <button class="flex items-center justify-center px-4 py-3 border border-gray-200 dark:border-gray-800 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+                                <i class="ph ph-apple-logo text-xl mr-2"></i> <span class="text-sm font-bold">Apple</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const loginBtn = document.getElementById('show-login');
+            const registerBtn = document.getElementById('show-register');
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+
+            loginBtn.addEventListener('click', () => {
+                loginForm.classList.remove('hidden');
+                registerForm.classList.add('hidden');
+                loginBtn.classList.remove('text-gray-400');
+                loginBtn.classList.add('text-black', 'dark:text-white');
+                registerBtn.classList.add('text-gray-400');
+                registerBtn.classList.remove('text-black', 'dark:text-white');
+            });
+
+            registerBtn.addEventListener('click', () => {
+                registerForm.classList.remove('hidden');
+                loginForm.classList.add('hidden');
+                registerBtn.classList.remove('text-gray-400');
+                registerBtn.classList.add('text-black', 'dark:text-white');
+                loginBtn.classList.add('text-gray-400');
+                loginBtn.classList.remove('text-black', 'dark:text-white');
+            });
+        });
+    </script>
+</body>
+</html>

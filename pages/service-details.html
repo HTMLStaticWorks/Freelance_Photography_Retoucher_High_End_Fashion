@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details - RetouchStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="antialiased transition-colors duration-300">
+
+    <header class="fixed w-full top-0 z-50 glass">
+        <!-- Add Standard Navbar Here -->
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
+            <nav class="hidden md:flex space-x-8"><a href="index.html">Home</a><a href="services.html">Services</a></nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: Detailed service hero section -->
+        <section class="relative h-[70vh] flex items-center justify-center bg-black overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-60">
+                <img src="https://images.unsplash.com/photo-1515347619253-1d009219e273?auto=format&fit=crop&q=80&w=2000" alt="High-End Beauty" class="w-full h-full object-cover img-parallax">
+            </div>
+            <div class="relative z-10 text-center text-white px-4">
+                <p class="uppercase tracking-[0.3em] text-xs mb-4" data-aos="fade-down">Service Overview</p>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">High-End Beauty</h1>
+                <p class="max-w-xl mx-auto text-lg text-white/80" data-aos="fade-up" data-aos-delay="100">Flawless, non-destructive skin retouching for macro beauty and cosmetics campaigns.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Editing workflow explanation -->
+        <section class="py-24 bg-white dark:bg-black">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="font-serif text-4xl font-bold mb-6">The Micro-Dodging Technique</h2>
+                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+                            Unlike basic blurring techniques that destroy skin texture, we utilize pixel-level micro-dodging and burning. This method involves manually lightening shadows and darkening highlights on a microscopic level to smooth out blemishes while retaining 100% of the natural pore structure.
+                        </p>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                            The result is skin that looks flawless yet undeniably real, meeting the rigorous standards of international beauty and cosmetics brands.
+                        </p>
+                    </div>
+                    <div class="relative" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=800" alt="Workflow" class="rounded-xl shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Deliverables and pricing table -->
+        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">Deliverables & Specs</h2>
+                
+                <div class="bg-white dark:bg-black rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden" data-aos="fade-up">
+                    <table class="w-full text-left">
+                        <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+                            <tr>
+                                <th class="p-6 font-bold text-sm uppercase tracking-wider">Feature</th>
+                                <th class="p-6 font-bold text-sm uppercase tracking-wider text-right">Details</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+                            <tr>
+                                <td class="p-6 font-medium">Turnaround Time</td>
+                                <td class="p-6 text-gray-500 text-right">3 - 5 Business Days</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">Revisions</td>
+                                <td class="p-6 text-gray-500 text-right">Up to 3 Rounds</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">File Formats Delivered</td>
+                                <td class="p-6 text-gray-500 text-right">16-bit TIFF & Web JPG</td>
+                            </tr>
+                            <tr>
+                                <td class="p-6 font-medium">Color Space</td>
+                                <td class="p-6 text-gray-500 text-right">Adobe RGB / sRGB</td>
+                            </tr>
+                            <tr class="bg-gray-50 dark:bg-gray-900">
+                                <td class="p-6 font-bold text-lg">Base Pricing</td>
+                                <td class="p-6 font-bold text-lg text-right">From $120 / image</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FAQ + inquiry CTA -->
+        <section class="py-24 bg-white dark:bg-black text-center">
+            <div class="max-w-2xl mx-auto px-4">
+                <h2 class="font-serif text-4xl font-bold mb-6" data-aos="fade-up">Ready to Start?</h2>
+                <p class="text-gray-500 mb-10" data-aos="fade-up" data-aos-delay="100">Upload a test file via our client portal or contact us directly to discuss your campaign scope.</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="dashboard.html" class="bg-black text-white dark:bg-white dark:text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider">Upload Test Image</a>
+                    <a href="contact.html" class="border border-black dark:border-white px-8 py-4 rounded-full font-bold uppercase tracking-wider">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-black py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
+        <p>&copy; 2026 RetouchStudio.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

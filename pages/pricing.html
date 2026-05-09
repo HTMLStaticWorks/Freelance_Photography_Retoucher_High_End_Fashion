@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - RetouchStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="antialiased transition-colors duration-300">
+
+    <header class="fixed w-full top-0 z-50 glass">
+        <!-- Add Standard Navbar Here -->
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
+            <nav class="hidden md:flex space-x-8"><a href="index.html">Home</a><a href="pricing.html" class="font-bold">Pricing</a></nav>
+        </div>
+    </header>
+
+    <main class="pt-32">
+        <!-- SECTION 1: Pricing hero -->
+        <section class="py-12 bg-white dark:bg-black text-center border-b border-gray-100 dark:border-gray-800">
+            <div class="max-w-3xl mx-auto px-4">
+                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">Transparent Pricing</h1>
+                <p class="text-gray-500 text-lg" data-aos="fade-up" data-aos-delay="100">Simple per-image rates based on the complexity of the retouching required.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Retouching package cards -->
+        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic -->
+                    <div class="bg-white dark:bg-black rounded-2xl p-10 shadow-sm" data-aos="fade-up">
+                        <h3 class="font-serif text-2xl mb-2">Standard</h3>
+                        <p class="text-gray-500 text-sm mb-6">Basic cleanup for large volumes.</p>
+                        <p class="text-5xl font-bold mb-8">$25 <span class="text-sm font-normal text-gray-500">/ img</span></p>
+                        <button class="w-full border border-black dark:border-white py-3 rounded-full font-bold uppercase tracking-wider mb-8 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">Start Project</button>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-center"><i class="ph ph-check mr-3 text-gray-400"></i> Basic Blemish Removal</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3 text-gray-400"></i> Color Correction</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3 text-gray-400"></i> Basic Background Cleanup</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Editorial (Highlighted) -->
+                    <div class="bg-black text-white dark:bg-white dark:text-black rounded-2xl p-10 transform md:-translate-y-4 shadow-2xl relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 text-white dark:bg-gray-200 dark:text-black px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">Most Selected</div>
+                        <h3 class="font-serif text-2xl mb-2">Editorial</h3>
+                        <p class="text-gray-400 dark:text-gray-500 text-sm mb-6">High-end retouching for magazines.</p>
+                        <p class="text-5xl font-bold mb-8">$75 <span class="text-sm font-normal text-gray-400 dark:text-gray-500">/ img</span></p>
+                        <button class="w-full bg-white text-black dark:bg-black dark:text-white py-3 rounded-full font-bold uppercase tracking-wider mb-8 hover:opacity-90 transition-opacity">Start Project</button>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-center"><i class="ph ph-check mr-3"></i> Frequency Separation</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3"></i> Dodge & Burn</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3"></i> Garment Cleaning</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3"></i> Cinematic Color Grading</li>
+                        </ul>
+                    </div>
+
+                    <!-- Master -->
+                    <div class="bg-white dark:bg-black rounded-2xl p-10 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="font-serif text-2xl mb-2">Master</h3>
+                        <p class="text-gray-500 text-sm mb-6">Complex composites & campaigns.</p>
+                        <p class="text-5xl font-bold mb-8">$150+ <span class="text-sm font-normal text-gray-500">/ img</span></p>
+                        <button class="w-full border border-black dark:border-white py-3 rounded-full font-bold uppercase tracking-wider mb-8 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">Contact Us</button>
+                        <ul class="space-y-4 text-sm">
+                            <li class="flex items-center"><i class="ph ph-check mr-3 text-gray-400"></i> Pixel-Level Macro Detail</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3 text-gray-400"></i> Advanced Compositing</li>
+                            <li class="flex items-center"><i class="ph ph-check mr-3 text-gray-400"></i> Unlimited Revisions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Feature comparison table -->
+        <section class="py-24 bg-white dark:bg-black overflow-x-auto">
+            <div class="max-w-5xl mx-auto px-4 min-w-[800px]">
+                <h3 class="font-serif text-3xl font-bold mb-10 text-center" data-aos="fade-up">Detailed Feature Comparison</h3>
+                <table class="w-full text-left" data-aos="fade-up">
+                    <thead class="border-b border-gray-200 dark:border-gray-800">
+                        <tr>
+                            <th class="py-4 font-bold uppercase tracking-wider text-sm">Feature</th>
+                            <th class="py-4 font-bold text-center">Standard</th>
+                            <th class="py-4 font-bold text-center">Editorial</th>
+                            <th class="py-4 font-bold text-center">Master</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+                        <tr>
+                            <td class="py-4 text-gray-500">Turnaround Time</td>
+                            <td class="py-4 text-center">48-72h</td>
+                            <td class="py-4 text-center">48-72h</td>
+                            <td class="py-4 text-center">3-5 Days</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 text-gray-500">Revisions</td>
+                            <td class="py-4 text-center">1 Round</td>
+                            <td class="py-4 text-center">2 Rounds</td>
+                            <td class="py-4 text-center">Unlimited</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 text-gray-500">Frequency Separation</td>
+                            <td class="py-4 text-center text-gray-300"><i class="ph ph-minus"></i></td>
+                            <td class="py-4 text-center"><i class="ph ph-check text-green-500"></i></td>
+                            <td class="py-4 text-center"><i class="ph ph-check text-green-500"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 text-gray-500">Micro Dodge & Burn</td>
+                            <td class="py-4 text-center text-gray-300"><i class="ph ph-minus"></i></td>
+                            <td class="py-4 text-center text-gray-300"><i class="ph ph-minus"></i></td>
+                            <td class="py-4 text-center"><i class="ph ph-check text-green-500"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FAQ section -->
+        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">Frequently Asked Questions</h2>
+                <div class="space-y-6">
+                    <div class="bg-white dark:bg-black rounded-xl p-6" data-aos="fade-up">
+                        <h4 class="font-bold mb-2">How do I submit my files?</h4>
+                        <p class="text-sm text-gray-500">Once you create an account, you can securely upload RAW files directly through our Client Portal dashboard.</p>
+                    </div>
+                    <div class="bg-white dark:bg-black rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+                        <h4 class="font-bold mb-2">Do you offer volume discounts?</h4>
+                        <p class="text-sm text-gray-500">Yes, for e-commerce and lookbook batches exceeding 50 images, we offer a 15% discount on the Standard tier.</p>
+                    </div>
+                    <div class="bg-white dark:bg-black rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="font-bold mb-2">What file formats do you deliver?</h4>
+                        <p class="text-sm text-gray-500">We typically deliver full-resolution 16-bit TIFFs for print, along with web-optimized sRGB JPGs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-black py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
+        <p>&copy; 2026 RetouchStudio.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* assets/css/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: #fafafa;
+  color: #111;
+  font-family: var(--font-sans);
+}
+
+.dark body {
+  background-color: #0a0a0a;
+  color: #f0f0f0;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+.dark ::-webkit-scrollbar-track {
+  background: #111; 
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #333; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #888; 
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(15, 15, 15, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Cursor follower */
+.cursor-follower {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.3s, height 0.3s, background 0.3s, border 0.3s;
+}
+
+.dark .cursor-follower {
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.cursor-follower.hover {
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.05);
+  border: none;
+  mix-blend-mode: difference;
+}
+
+.dark .cursor-follower.hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Image Utilities */
+.img-reveal {
+  clip-path: inset(100% 0 0 0);
+  transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.img-reveal.aos-animate {
+  clip-path: inset(0 0 0 0);
+}

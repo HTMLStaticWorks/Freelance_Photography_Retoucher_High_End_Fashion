@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High-End Fashion Retouching - RetouchStudio</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }
+    </script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="antialiased transition-colors duration-300">
+
+    <!-- Header (Same as index) -->
+    <header class="fixed w-full top-0 z-50 glass transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-2xl font-bold tracking-tighter">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
+                </div>
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-medium hover:text-gray-500 transition-colors">Home</a>
+                    <a href="niche.html" class="text-sm font-medium hover:text-gray-500 transition-colors">Fashion</a>
+                    <a href="services.html" class="text-sm font-medium hover:text-gray-500 transition-colors">Services</a>
+                    <a href="about.html" class="text-sm font-medium hover:text-gray-500 transition-colors">About</a>
+                    <a href="contact.html" class="text-sm font-medium hover:text-gray-500 transition-colors">Contact</a>
+                </nav>
+                <div class="hidden md:flex items-center space-x-4">
+                    <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i class="ph ph-moon text-xl dark:hidden"></i>
+                        <i class="ph ph-sun text-xl hidden dark:block"></i>
+                    </button>
+                    <a href="login.html" class="text-sm font-medium hover:text-gray-500 transition-colors">Login</a>
+                    <a href="dashboard.html" class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105">Client Portal</a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center space-x-4">
+                    <button class="theme-toggle p-2 rounded-full"><i class="ph ph-moon text-xl dark:hidden"></i><i class="ph ph-sun text-xl hidden dark:block"></i></button>
+                    <button id="mobile-menu-btn" class="p-2"><i class="ph ph-list text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass border-t border-gray-200 dark:border-gray-800">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="niche.html" class="block px-3 py-2 rounded-md text-base font-medium">Fashion</a>
+                <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: Fullscreen editorial hero banner -->
+        <section class="relative h-screen flex items-center justify-center overflow-hidden bg-black">
+            <div class="absolute inset-0 z-0 opacity-70">
+                <img src="https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?auto=format&fit=crop&q=80&w=2000" alt="Fashion Editorial" class="w-full h-full object-cover img-parallax scale-110 grayscale hover:grayscale-0 transition-all duration-1000">
+            </div>
+            
+            <div class="relative z-10 w-full px-4 sm:px-6 lg:px-8 mt-20 flex flex-col items-center">
+                <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl text-white font-bold tracking-tighter uppercase mb-4 text-center mix-blend-difference" data-aos="fade-up" data-aos-duration="1500">
+                    Editorial
+                </h1>
+                <p class="text-white/80 uppercase tracking-[0.5em] text-sm md:text-base font-light mb-12 text-center" data-aos="fade-up" data-aos-delay="400">The Art of Subtlety</p>
+                <a href="#skin" class="w-16 h-16 rounded-full border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition-colors duration-500 animate-bounce" data-aos="fade-in" data-aos-delay="800">
+                    <i class="ph ph-arrow-down text-2xl"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- SECTION 2: High-end skin retouching showcase -->
+        <section id="skin" class="py-24 bg-white dark:bg-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="w-full lg:w-1/2 relative" data-aos="fade-right">
+                        <div class="aspect-[4/5] overflow-hidden rounded-lg">
+                            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&q=80&w=1000" alt="Skin Texture" class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000">
+                        </div>
+                        <!-- Floating badge -->
+                        <div class="absolute -bottom-6 -right-6 bg-black dark:bg-white text-white dark:text-black p-6 rounded-full shadow-2xl glass">
+                            <p class="font-serif text-sm font-bold uppercase tracking-wider text-center">Micro<br>Dodging</p>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">Precision Focus</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">High-End Skin Retouching</h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                            We utilize frequency separation and micro-dodging & burning to perfect skin tones while retaining absolute 100% of the natural pore structure and fine hairs. No plastic blurring, just pristine editorial quality.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center"><i class="ph-fill ph-check-circle text-black dark:text-white mr-3"></i> Frequency Separation</li>
+                            <li class="flex items-center"><i class="ph-fill ph-check-circle text-black dark:text-white mr-3"></i> Blemish & Flyaway Removal</li>
+                            <li class="flex items-center"><i class="ph-fill ph-check-circle text-black dark:text-white mr-3"></i> Contour Enhancement</li>
+                        </ul>
+                        <a href="service-details.html" class="inline-flex items-center border-b-2 border-black dark:border-white pb-1 font-bold uppercase text-sm tracking-widest hover:text-gray-500 transition-colors">See the Details <i class="ph ph-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Color grading & composite editing section -->
+        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
+                    <div class="w-full lg:w-1/2" data-aos="fade-left">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="aspect-square overflow-hidden rounded-lg mt-8">
+                                <img src="https://images.unsplash.com/photo-1542451313056-b7c8e626645f?auto=format&fit=crop&q=80&w=800" alt="Color Grading 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="aspect-square overflow-hidden rounded-lg">
+                                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800" alt="Color Grading 2" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full lg:w-1/2" data-aos="fade-right">
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">Cinematic Color Grading</h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+                            Our grading process breathes life into campaigns. From deep, moody cinematic tones to vibrant, airy commercial looks, we tailor the color palette to match your brand's unique narrative.
+                        </p>
+                        <div class="bg-white dark:bg-black p-8 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800">
+                            <h4 class="font-bold mb-2">Composite Mastery</h4>
+                            <p class="text-sm text-gray-500">Seamless background extensions, precise masking, and complex element integration for flawless campaign finalization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Batch processing portfolio carousel -->
+        <section class="py-24 bg-white dark:bg-black overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-4" data-aos="fade-up">Campaign Batch Processing</h2>
+                <p class="text-gray-500 dark:text-gray-400" data-aos="fade-up" data-aos-delay="100">Consistency across hundreds of images for e-commerce and lookbooks.</p>
+            </div>
+            
+            <!-- Swiper Carousel -->
+            <div class="swiper-container-batch px-4 md:px-10" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <!-- Carousel Items -->
+                    <div class="swiper-slide aspect-[3/4]"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide aspect-[3/4]"><img src="https://images.unsplash.com/photo-1509631179647-0c9528c66fd7?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide aspect-[3/4]"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide aspect-[3/4]"><img src="https://images.unsplash.com/photo-1515347619253-1d009219e273?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover rounded-lg"></div>
+                    <div class="swiper-slide aspect-[3/4]"><img src="https://images.unsplash.com/photo-1524041255072-7da0525d6b34?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover rounded-lg"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Luxury fashion campaign showcase -->
+        <section class="py-0 flex flex-col md:flex-row">
+            <div class="w-full md:w-1/2 relative h-[60vh] md:h-[80vh] group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=1000" alt="Campaign 1" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="text-center">
+                        <p class="text-white text-xs uppercase tracking-[0.3em] mb-2">Lookbook</p>
+                        <h3 class="font-serif text-3xl text-white">Autumn Collection '26</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 relative h-[60vh] md:h-[80vh] group overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1485230405346-71acb9518d9c?auto=format&fit=crop&q=80&w=1000" alt="Campaign 2" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <div class="text-center">
+                        <p class="text-white text-xs uppercase tracking-[0.3em] mb-2">Editorial</p>
+                        <h3 class="font-serif text-3xl text-white">Vogue Paris Cover</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Premium contact CTA section -->
+        <section class="py-32 bg-black text-white relative">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <i class="ph ph-envelope-simple-open text-6xl text-gray-500 mb-6" data-aos="fade-up"></i>
+                <h2 class="font-serif text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Elevate Your Next Campaign</h2>
+                <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">Contact our lead retoucher to discuss your upcoming project requirements and receive a custom estimate.</p>
+                <a href="contact.html" class="inline-block bg-white text-black px-10 py-5 rounded-full font-bold uppercase tracking-wider hover:bg-gray-200 transition-colors" data-aos="zoom-in" data-aos-delay="300">Book a Consultation</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index) -->
+    <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+        <!-- ... Footer Content ... -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
+                <p>&copy; 2026 RetouchStudio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof Swiper !== 'undefined') {
+                new Swiper('.swiper-container-batch', {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                    loop: true,
+                    centeredSlides: true,
+                    autoplay: { delay: 3000 },
+                    breakpoints: {
+                        640: { slidesPerView: 2.5, spaceBetween: 20 },
+                        1024: { slidesPerView: 4.5, spaceBetween: 30 },
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

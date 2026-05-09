@@ -1,0 +1,12 @@
+/* RTL specifics */
+html[dir="rtl"] {
+    text-align: right;
+}
+html[dir="rtl"] .ml-auto {
+    margin-right: auto;
+    margin-left: 0;
+}
+html[dir="rtl"] .mr-4 {
+    margin-left: 1rem;
+    margin-right: 0;
+}

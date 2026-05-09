@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - RetouchStudio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body class="antialiased transition-colors duration-300">
+    
+    <!-- Navbar (Simplified for mockup) -->
+    <header class="fixed w-full top-0 z-50 glass">
+        <!-- Add Standard Navbar Here -->
+        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+            <a href="index.html" class="font-serif text-2xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
+            <nav class="hidden md:flex space-x-8"><a href="index.html">Home</a><a href="about.html" class="font-bold">About</a></nav>
+            <div class="hidden md:flex"><a href="dashboard.html" class="bg-black text-white px-5 py-2 rounded-full">Client Portal</a></div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- SECTION 1: Brand story -->
+        <section class="py-24 bg-white dark:bg-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6">Our Story</h1>
+                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-lg">Founded in 2018 in Milan, RetouchStudio began as an exclusive boutique serving a handful of premier fashion photographers. Today, we are a globally recognized post-production house.</p>
+                        <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg">We believe that a retoucher is the silent partner to the photographer. Our job isn't to change the narrative, but to eliminate distractions and let the true essence of the subject shine through.</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Signature_of_John_Hancock.svg/1200px-Signature_of_John_Hancock.svg.png" alt="Signature" class="h-12 dark:invert opacity-60">
+                    </div>
+                    <div class="relative" data-aos="fade-left">
+                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1000" alt="Studio" class="rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-8 -left-8 bg-black text-white p-8 rounded-xl hidden md:block">
+                            <p class="text-4xl font-serif font-bold mb-1">15+</p>
+                            <p class="text-xs uppercase tracking-widest text-gray-400">Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Mission and creative philosophy -->
+        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <i class="ph ph-diamond text-4xl text-black dark:text-white mb-6" data-aos="fade-up"></i>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8" data-aos="fade-up" data-aos-delay="100">"We strive for the invisible edit. The best retouching is the kind you never notice."</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-left">
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">Authenticity</h4>
+                        <p class="text-sm text-gray-500">Preserving the integrity of the original photograph while enhancing its core strengths.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="300">
+                        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">Precision</h4>
+                        <p class="text-sm text-gray-500">Meticulous pixel-level attention to detail, ensuring flawless rendering on any medium.</p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="400">
+                        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">Discretion</h4>
+                        <p class="text-sm text-gray-500">Absolute confidentiality for unreleased campaigns and high-profile editorial subjects.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Team members/retouch specialists -->
+        <section class="py-24 bg-white dark:bg-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">The Specialists</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                    <!-- Member 1 -->
+                    <div class="group text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="overflow-hidden rounded-full aspect-square mb-6">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h4 class="font-serif text-xl font-bold">Julian Rossi</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Lead Retoucher</p>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="group text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="overflow-hidden rounded-full aspect-square mb-6">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h4 class="font-serif text-xl font-bold">Clara Dupont</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Colorist</p>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="group text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="overflow-hidden rounded-full aspect-square mb-6">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h4 class="font-serif text-xl font-bold">Marc Evans</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Composite Artist</p>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="group text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="overflow-hidden rounded-full aspect-square mb-6">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                        </div>
+                        <h4 class="font-serif text-xl font-bold">Lina Chen</h4>
+                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Studio Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Testimonials and achievements -->
+        <section class="py-24 bg-black text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div data-aos="fade-right">
+                        <h2 class="font-serif text-4xl font-bold mb-8">Achievements</h2>
+                        <div class="space-y-6">
+                            <div class="border-b border-gray-800 pb-4">
+                                <p class="text-gray-400 text-sm">2025</p>
+                                <h4 class="text-xl">Awwwards - Site of the Day</h4>
+                            </div>
+                            <div class="border-b border-gray-800 pb-4">
+                                <p class="text-gray-400 text-sm">2024</p>
+                                <h4 class="text-xl">International Photography Awards - Retouching</h4>
+                            </div>
+                            <div class="border-b border-gray-800 pb-4">
+                                <p class="text-gray-400 text-sm">2022</p>
+                                <h4 class="text-xl">Vogue Feature - Post-Production Mastery</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-left" class="bg-luxury-900 p-10 rounded-2xl flex flex-col justify-center">
+                        <i class="ph-fill ph-quotes text-3xl text-gray-600 mb-6"></i>
+                        <p class="font-serif text-2xl mb-8">"RetouchStudio understands the fragile balance between polishing an image and destroying its soul. They are the only studio I trust with my RAW files."</p>
+                        <p class="font-bold uppercase tracking-widest text-sm">— David Bailey</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-black py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
+        <p>&copy; 2026 RetouchStudio.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
