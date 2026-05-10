@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Coming Soon - RAW
+   404 Not Found - RAW
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
@@ -14,26 +14,20 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/@phosphor-icons/web">
   </script>
-  <link href="../assets/css/style.css" rel="stylesheet"/>
-  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/dark-mode.css" rel="stylesheet"/>
   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
  </head>
- <body class="antialiased text-white">
-  <!-- Background Image -->
-  <div class="fixed inset-0 z-0">
-   <img alt="Background" class="w-full h-full object-cover scale-105 filter grayscale opacity-40 mix-blend-overlay" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"/>
-   <div class="absolute inset-0 bg-black/80">
-   </div>
-  </div>
+ <body class="antialiased bg-white dark:bg-black transition-colors duration-300">
   <!-- Header / Navbar -->
   <header class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
      <!-- Logo -->
      <div class="flex-shrink-0 flex items-center">
-      <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center text-white group" href="index.html">
-       <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
-      </a>
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
      </div>
      <!-- Desktop Menu -->
      <nav class="hidden lg:flex space-x-8 items-center">
@@ -71,18 +65,16 @@
      <!-- Actions -->
      <div class="hidden lg:flex items-center space-x-4">
       <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
-       <i class="ph ph-moon text-xl dark:hidden text-white">
+       <i class="ph ph-moon text-xl dark:hidden">
        </i>
-       <i class="ph ph-sun text-xl hidden dark:block text-white">
+       <i class="ph ph-sun text-xl hidden dark:block">
        </i>
       </button>
-      <button class="rtl-toggle text-xs font-bold px-2 text-white">
+      <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
        RTL
       </button>
-      <a class="text-sm font-medium hover:text-gray-500 transition-colors text-white" href="login.html">
-       Login
-      </a>
-      <a class="bg-white text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
+      <a class="border border-gray-300 dark:border-white/30 px-5 py-2 rounded-full text-sm font-medium text-gray-800 dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all transform hover:scale-105" href="login.html">Login</a>
+      <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
        Client Portal
       </a>
      </div>
@@ -92,12 +84,12 @@
          RTL
         </button>
        <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
-       <i class="ph ph-moon text-xl dark:hidden text-white">
+       <i class="ph ph-moon text-xl dark:hidden">
        </i>
-       <i class="ph ph-sun text-xl hidden dark:block text-white">
+       <i class="ph ph-sun text-xl hidden dark:block">
        </i>
       </button>
-      <button class="p-2 text-white" id="mobile-menu-btn">
+      <button class="p-2" id="mobile-menu-btn">
        <i class="ph ph-list text-2xl">
        </i>
       </button>
@@ -122,111 +114,96 @@
      </a>
       </div>
      </div>
-     <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="about.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
+      <i class="ph ph-list mr-2"></i>
       About
      </a>
-     <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="services.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
+      <i class="ph ph-list mr-2"></i>
       Services
      </a>
-     <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="niche.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
+      <i class="ph ph-list mr-2"></i>
       Fashion
      </a>
-     <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="portfolio.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
+      <i class="ph ph-list mr-2"></i>
       Portfolio
      </a>
-     <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="contact.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+      <i class="ph ph-list mr-2"></i>
       Contact
      </a>
      <div class="border-t border-gray-200 dark:border-gray-700 pt-2 pb-2">
-      <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="login.html">
-       Login
-      </a>
-      <a class="block px-3 py-2 rounded-md text-base font-medium text-white" href="dashboard.html">
-       Client Portal
-      </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="login.html">
+      <i class="ph ph-list mr-2"></i>
+      Login
+     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="dashboard.html">
+      <i class="ph ph-list mr-2"></i>
+      Client Portal
+     </a>
      </div>
     </div>
    </div>
   </header>
-  <!-- Main Content -->
-  <main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-20 pb-10">
-   <div class="max-w-2xl mx-auto text-center w-full">
-    <!-- SECTION 2: Brand maintenance message -->
-    <p class="text-xs font-bold uppercase tracking-[0.4em] text-gray-400 mb-6" data-aos="fade-down">
-     The New Standard in Retouching
-    </p>
-    <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up">
-     A New Era of Perfection is Approaching.
-    </h1>
-    <p class="text-gray-300 text-lg mb-16" data-aos="fade-up" data-aos-delay="100">
-     Our elite digital darkroom and client management portal is currently undergoing final calibration. We'll be ready to process your files shortly.
-    </p>
-    <!-- SECTION 1: Animated countdown timer -->
-    <div class="flex justify-center space-x-6 sm:space-x-10 mb-16" data-aos="fade-up" data-aos-delay="200">
-     <div class="text-center">
-      <p class="font-serif text-4xl md:text-5xl font-bold" id="days">
-       14
-      </p>
-      <p class="text-xs uppercase tracking-widest text-gray-500 mt-2">
-       Days
-      </p>
+  <main class="min-h-screen pt-32 pb-24 flex flex-col justify-center">
+   <div class="max-w-4xl mx-auto px-4 text-center">
+    <!-- SECTION 1 & 2: Animated 404 headline & Creative illustration -->
+    <div class="relative mb-12" data-aos="zoom-in">
+     <!-- Abstract Creative Element -->
+     <div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10 dark:opacity-20">
+      <i class="ph-fill ph-camera text-[20rem]">
+      </i>
      </div>
-     <div class="text-center">
-      <p class="font-serif text-4xl md:text-5xl font-bold" id="hours">
-       08
-      </p>
-      <p class="text-xs uppercase tracking-widest text-gray-500 mt-2">
-       Hours
-      </p>
-     </div>
-     <div class="text-center">
-      <p class="font-serif text-4xl md:text-5xl font-bold" id="minutes">
-       45
-      </p>
-      <p class="text-xs uppercase tracking-widest text-gray-500 mt-2">
-       Minutes
-      </p>
-     </div>
-     <div class="text-center">
-      <p class="font-serif text-4xl md:text-5xl font-bold" id="seconds">
-       22
-      </p>
-      <p class="text-xs uppercase tracking-widest text-gray-500 mt-2">
-       Seconds
-      </p>
-     </div>
-    </div>
-    <!-- SECTION 3: Email subscription form -->
-    <div class="max-w-md mx-auto mb-16" data-aos="fade-up" data-aos-delay="300">
-     <p class="text-xs uppercase tracking-widest text-gray-400 mb-4 font-medium">
-      Be the first to know when we launch
+     <h1 class="font-serif text-9xl md:text-[12rem] font-bold tracking-tighter leading-none mb-4 relative z-10">
+      404
+     </h1>
+     <p class="text-xs font-bold uppercase tracking-[0.5em] text-gray-500 relative z-10 mb-8">
+      Page Not Found
      </p>
-     <form class="flex border-b border-gray-600 pb-2">
-      <input class="bg-transparent border-none outline-none flex-grow text-white placeholder-gray-500 text-sm focus:ring-0" placeholder="Enter your email address" type="email"/>
-      <button class="text-sm font-bold uppercase tracking-wider hover:text-gray-300 transition-colors" type="submit">
-       Notify Me
-      </button>
-     </form>
+     <h2 class="font-serif text-3xl md:text-4xl font-bold relative z-10 mb-6">
+      Looks like we lost focus.
+     </h2>
+     <p class="text-gray-500 max-w-lg mx-auto relative z-10 text-lg">
+      The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+     </p>
     </div>
-    <!-- SECTION 4: Social media links -->
-    <div class="flex justify-center space-x-6" data-aos="fade-in" data-aos-delay="400">
-     <a class="text-gray-400 hover:text-white transition-colors" href="#">
-      <i class="ph ph-instagram-logo text-2xl">
+    <!-- SECTION 3: Navigation buttons -->
+    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-24 relative z-10" data-aos="fade-up" data-aos-delay="100">
+     <a class="bg-black text-white dark:bg-white dark:text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:scale-105 transition-transform flex items-center justify-center" href="index.html">
+      <i class="ph ph-house mr-2 text-xl">
       </i>
+      Back to Homepage
      </a>
-     <a class="text-gray-400 hover:text-white transition-colors" href="#">
-      <i class="ph ph-behance-logo text-2xl">
-      </i>
+     <a class="border border-black dark:border-white px-8 py-4 rounded-full font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-900 transition-colors flex items-center justify-center" href="contact.html">
+      Contact Support
      </a>
-     <a class="text-gray-400 hover:text-white transition-colors" href="#">
-      <i class="ph ph-twitter-logo text-2xl">
-      </i>
-     </a>
+    </div>
+    <!-- SECTION 4: Suggested pages section -->
+    <div class="text-left max-w-2xl mx-auto border-t border-gray-200 dark:border-gray-800 pt-12 relative z-10" data-aos="fade-up" data-aos-delay="200">
+     <h3 class="font-bold uppercase tracking-widest text-xs text-gray-400 mb-6 text-center">
+      Suggested Links
+     </h3>
+     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm font-medium">
+      <a class="p-4 bg-luxury-50 dark:bg-luxury-900 rounded-lg hover:text-gray-500 transition-colors" href="services.html">
+       Services
+      </a>
+      <a class="p-4 bg-luxury-50 dark:bg-luxury-900 rounded-lg hover:text-gray-500 transition-colors" href="home2.html">
+       Home 2
+      </a>
+      <a class="p-4 bg-luxury-50 dark:bg-luxury-900 rounded-lg hover:text-gray-500 transition-colors" href="blog.html">
+       Journal
+      </a>
+      <a class="p-4 bg-luxury-50 dark:bg-luxury-900 rounded-lg hover:text-gray-500 transition-colors" href="login.html">
+       Portal
+      </a>
+     </div>
     </div>
    </div>
   </main>
   <!-- Footer -->
-  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800 relative z-10">
+  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
      <div class="col-span-1 md:col-span-2">
@@ -315,25 +292,7 @@
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
   </script>
-  <script src="../assets/js/main.js">
-  </script>
-  <script>
-   // Simple Countdown Logic
-        const dest = new Date().getTime() + (14 * 24 * 60 * 60 * 1000);
-        setInterval(function() {
-            const now = new Date().getTime();
-            const diff = dest - now;
-
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
-            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
-            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
-            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
-        }, 1000);
+  <script src="assets/js/main.js">
   </script>
  
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">

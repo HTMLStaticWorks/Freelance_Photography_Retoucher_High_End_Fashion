@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Pricing - RAW
+   Service Details - RAW
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
@@ -14,8 +14,8 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/@phosphor-icons/web">
   </script>
-  <link href="../assets/css/style.css" rel="stylesheet"/>
-  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/dark-mode.css" rel="stylesheet"/>
   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
  </head>
  <body class="antialiased transition-colors duration-300">
@@ -49,7 +49,7 @@
       <a class="text-sm nav-link" href="about.html">
        About
       </a>
-      <a class="text-sm nav-link" href="services.html">
+      <a class="text-sm nav-link active" href="services.html">
        Services
       </a>
       <a class="text-sm nav-link" href="niche.html">
@@ -73,10 +73,7 @@
       <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
        RTL
       </button>
-       <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ml-2" href="login.html">
-        Login
-       </a>
-
+      <a class="border border-gray-300 dark:border-white/30 px-5 py-2 rounded-full text-sm font-medium text-gray-800 dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all transform hover:scale-105" href="login.html">Login</a>
       <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
        Client Portal
       </a>
@@ -121,7 +118,7 @@
       <i class="ph ph-list mr-2"></i>
       About
      </a>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="services.html">
       <i class="ph ph-list mr-2"></i>
       Services
      </a>
@@ -138,7 +135,10 @@
       Contact
      </a>
      <div class="border-t border-gray-200 dark:border-gray-700 pt-2 pb-2">
-
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="login.html">
+      <i class="ph ph-list mr-2"></i>
+      Login
+     </a>
       <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="dashboard.html">
       <i class="ph ph-list mr-2"></i>
       Client Portal
@@ -147,259 +147,125 @@
     </div>
    </div>
   </header>
-  <main class="pt-32">
-   <!-- SECTION 1: Pricing hero -->
-   <section class="py-12 bg-white dark:bg-black text-center border-b border-gray-100 dark:border-gray-800">
-    <div class="max-w-3xl mx-auto px-4">
+  <main>
+   <!-- SECTION 1: Detailed service hero section -->
+   <section class="relative h-[70vh] flex items-center justify-center bg-black overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-60">
+     <img alt="High-End Beauty" class="w-full h-full object-cover img-parallax" src="https://images.unsplash.com/photo-1515347619253-1d009219e273?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"/>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+     <p class="uppercase tracking-[0.3em] text-xs mb-4" data-aos="fade-down">
+      Service Overview
+     </p>
      <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
-      Transparent Pricing
+      High-End Beauty
      </h1>
-     <p class="text-gray-500 text-lg" data-aos="fade-up" data-aos-delay="100">
-      Simple per-image rates based on the complexity of the retouching required.
+     <p class="max-w-xl mx-auto text-lg text-white/80" data-aos="fade-up" data-aos-delay="100">
+      Flawless, non-destructive skin retouching for macro beauty and cosmetics campaigns.
      </p>
     </div>
    </section>
-   <!-- SECTION 2: Retouching package cards -->
-   <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Basic -->
-      <div class="bg-white dark:bg-black rounded-2xl p-10 shadow-sm" data-aos="fade-up">
-       <h3 class="font-serif text-2xl mb-2">
-        Standard
-       </h3>
-       <p class="text-gray-500 text-sm mb-6">
-        Basic cleanup for large volumes.
+   <!-- SECTION 2: Editing workflow explanation -->
+   <section class="py-24 bg-white dark:bg-black">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+       <h2 class="font-serif text-4xl font-bold mb-6">
+        The Micro-Dodging Technique
+       </h2>
+       <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
+        Unlike basic blurring techniques that destroy skin texture, we utilize pixel-level micro-dodging and burning. This method involves manually lightening shadows and darkening highlights on a microscopic level to smooth out blemishes while retaining 100% of the natural pore structure.
        </p>
-       <p class="text-5xl font-bold mb-8">
-        $25
-        <span class="text-sm font-normal text-gray-500">
-         / img
-        </span>
+       <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+        The result is skin that looks flawless yet undeniably real, meeting the rigorous standards of international beauty and cosmetics brands.
        </p>
-       <button class="w-full border border-black dark:border-white py-3 rounded-full font-bold uppercase tracking-wider mb-8 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-        Start Project
-       </button>
-       <ul class="space-y-4 text-sm">
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3 text-gray-400">
-         </i>
-         Basic Blemish Removal
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3 text-gray-400">
-         </i>
-         Color Correction
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3 text-gray-400">
-         </i>
-         Basic Background Cleanup
-        </li>
-       </ul>
       </div>
-      <!-- Editorial (Highlighted) -->
-      <div class="bg-black text-white dark:bg-white dark:text-black rounded-2xl p-10 transform md:-translate-y-4 shadow-2xl relative" data-aos="fade-up" data-aos-delay="100">
-       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-800 text-white dark:bg-gray-200 dark:text-black px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">
-        Most Selected
-       </div>
-       <h3 class="font-serif text-2xl mb-2">
-        Editorial
-       </h3>
-       <p class="text-gray-400 dark:text-gray-500 text-sm mb-6">
-        High-end retouching for magazines.
-       </p>
-       <p class="text-5xl font-bold mb-8">
-        $75
-        <span class="text-sm font-normal text-gray-400 dark:text-gray-500">
-         / img
-        </span>
-       </p>
-       <button class="w-full bg-white text-black dark:bg-black dark:text-white py-3 rounded-full font-bold uppercase tracking-wider mb-8 hover:opacity-90 transition-opacity">
-        Start Project
-       </button>
-       <ul class="space-y-4 text-sm">
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3">
-         </i>
-         Frequency Separation
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3">
-         </i>
-         Dodge &amp; Burn
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3">
-         </i>
-         Garment Cleaning
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3">
-         </i>
-         Cinematic Color Grading
-        </li>
-       </ul>
-      </div>
-      <!-- Master -->
-      <div class="bg-white dark:bg-black rounded-2xl p-10 shadow-sm" data-aos="fade-up" data-aos-delay="200">
-       <h3 class="font-serif text-2xl mb-2">
-        Master
-       </h3>
-       <p class="text-gray-500 text-sm mb-6">
-        Complex composites &amp; campaigns.
-       </p>
-       <p class="text-5xl font-bold mb-8">
-        $150+
-        <span class="text-sm font-normal text-gray-500">
-         / img
-        </span>
-       </p>
-       <button class="w-full border border-black dark:border-white py-3 rounded-full font-bold uppercase tracking-wider mb-8 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-        Contact Us
-       </button>
-       <ul class="space-y-4 text-sm">
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3 text-gray-400">
-         </i>
-         Pixel-Level Macro Detail
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3 text-gray-400">
-         </i>
-         Advanced Compositing
-        </li>
-        <li class="flex items-center">
-         <i class="ph ph-check mr-3 text-gray-400">
-         </i>
-         Unlimited Revisions
-        </li>
-       </ul>
+      <div class="relative" data-aos="fade-left">
+       <img alt="Workflow" class="rounded-xl shadow-xl" src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&amp;fit=crop&amp;q=80&amp;w=800"/>
       </div>
      </div>
     </div>
    </section>
-   <!-- SECTION 3: Feature comparison table -->
-   <section class="py-24 bg-white dark:bg-black overflow-x-auto">
-    <div class="max-w-5xl mx-auto px-4 min-w-[800px]">
-     <h3 class="font-serif text-3xl font-bold mb-10 text-center" data-aos="fade-up">
-      Detailed Feature Comparison
-     </h3>
-     <table class="w-full text-left" data-aos="fade-up">
-      <thead class="border-b border-gray-200 dark:border-gray-800">
-       <tr>
-        <th class="py-4 font-bold uppercase tracking-wider text-sm">
-         Feature
-        </th>
-        <th class="py-4 font-bold text-center">
-         Standard
-        </th>
-        <th class="py-4 font-bold text-center">
-         Editorial
-        </th>
-        <th class="py-4 font-bold text-center">
-         Master
-        </th>
-       </tr>
-      </thead>
-      <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
-       <tr>
-        <td class="py-4 text-gray-500">
-         Turnaround Time
-        </td>
-        <td class="py-4 text-center">
-         48-72h
-        </td>
-        <td class="py-4 text-center">
-         48-72h
-        </td>
-        <td class="py-4 text-center">
-         3-5 Days
-        </td>
-       </tr>
-       <tr>
-        <td class="py-4 text-gray-500">
-         Revisions
-        </td>
-        <td class="py-4 text-center">
-         1 Round
-        </td>
-        <td class="py-4 text-center">
-         2 Rounds
-        </td>
-        <td class="py-4 text-center">
-         Unlimited
-        </td>
-       </tr>
-       <tr>
-        <td class="py-4 text-gray-500">
-         Frequency Separation
-        </td>
-        <td class="py-4 text-center text-gray-300">
-         <i class="ph ph-minus">
-         </i>
-        </td>
-        <td class="py-4 text-center">
-         <i class="ph ph-check text-green-500">
-         </i>
-        </td>
-        <td class="py-4 text-center">
-         <i class="ph ph-check text-green-500">
-         </i>
-        </td>
-       </tr>
-       <tr>
-        <td class="py-4 text-gray-500">
-         Micro Dodge &amp; Burn
-        </td>
-        <td class="py-4 text-center text-gray-300">
-         <i class="ph ph-minus">
-         </i>
-        </td>
-        <td class="py-4 text-center text-gray-300">
-         <i class="ph ph-minus">
-         </i>
-        </td>
-        <td class="py-4 text-center">
-         <i class="ph ph-check text-green-500">
-         </i>
-        </td>
-       </tr>
-      </tbody>
-     </table>
+   <!-- SECTION 3: Deliverables and pricing table -->
+   <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+     <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">
+      Deliverables &amp; Specs
+     </h2>
+     <div class="bg-white dark:bg-black rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden" data-aos="fade-up">
+      <table class="w-full text-left">
+       <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
+        <tr>
+         <th class="p-6 font-bold text-sm uppercase tracking-wider">
+          Feature
+         </th>
+         <th class="p-6 font-bold text-sm uppercase tracking-wider text-right">
+          Details
+         </th>
+        </tr>
+       </thead>
+       <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+        <tr>
+         <td class="p-6 font-medium">
+          Turnaround Time
+         </td>
+         <td class="p-6 text-gray-500 text-right">
+          3 - 5 Business Days
+         </td>
+        </tr>
+        <tr>
+         <td class="p-6 font-medium">
+          Revisions
+         </td>
+         <td class="p-6 text-gray-500 text-right">
+          Up to 3 Rounds
+         </td>
+        </tr>
+        <tr>
+         <td class="p-6 font-medium">
+          File Formats Delivered
+         </td>
+         <td class="p-6 text-gray-500 text-right">
+          16-bit TIFF &amp; Web JPG
+         </td>
+        </tr>
+        <tr>
+         <td class="p-6 font-medium">
+          Color Space
+         </td>
+         <td class="p-6 text-gray-500 text-right">
+          Adobe RGB / sRGB
+         </td>
+        </tr>
+        <tr class="bg-gray-50 dark:bg-gray-900">
+         <td class="p-6 font-bold text-lg">
+          Base Pricing
+         </td>
+         <td class="p-6 font-bold text-lg text-right">
+          From $120 / image
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
     </div>
    </section>
-   <!-- SECTION 4: FAQ section -->
-   <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-     <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">
-      Frequently Asked Questions
+   <!-- SECTION 4: FAQ + inquiry CTA -->
+   <section class="py-24 bg-white dark:bg-black text-center">
+    <div class="max-w-2xl mx-auto px-4">
+     <h2 class="font-serif text-4xl font-bold mb-6" data-aos="fade-up">
+      Ready to Start?
      </h2>
-     <div class="space-y-6">
-      <div class="bg-white dark:bg-black rounded-xl p-6" data-aos="fade-up">
-       <h4 class="font-bold mb-2">
-        How do I submit my files?
-       </h4>
-       <p class="text-sm text-gray-500">
-        Once you create an account, you can securely upload RAW files directly through our Client Portal dashboard.
-       </p>
-      </div>
-      <div class="bg-white dark:bg-black rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
-       <h4 class="font-bold mb-2">
-        Do you offer volume discounts?
-       </h4>
-       <p class="text-sm text-gray-500">
-        Yes, for e-commerce and lookbook batches exceeding 50 images, we offer a 15% discount on the Standard tier.
-       </p>
-      </div>
-      <div class="bg-white dark:bg-black rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
-       <h4 class="font-bold mb-2">
-        What file formats do you deliver?
-       </h4>
-       <p class="text-sm text-gray-500">
-        We typically deliver full-resolution 16-bit TIFFs for print, along with web-optimized sRGB JPGs.
-       </p>
-      </div>
+     <p class="text-gray-500 mb-10" data-aos="fade-up" data-aos-delay="100">
+      Upload a test file via our client portal or contact us directly to discuss your campaign scope.
+     </p>
+     <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
+      <a class="bg-black text-white dark:bg-white dark:text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider" href="dashboard.html">
+       Upload Test Image
+      </a>
+      <a class="border border-black dark:border-white px-8 py-4 rounded-full font-bold uppercase tracking-wider" href="contact.html">
+       Contact Sales
+      </a>
      </div>
     </div>
    </section>
@@ -494,7 +360,7 @@
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
   </script>
-  <script src="../assets/js/main.js">
+  <script src="assets/js/main.js">
   </script>
  
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">

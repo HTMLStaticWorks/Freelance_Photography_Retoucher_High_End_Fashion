@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Service Details - RAW
+   Blog Details - RAW
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
@@ -14,8 +14,8 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/@phosphor-icons/web">
   </script>
-  <link href="../assets/css/style.css" rel="stylesheet"/>
-  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/dark-mode.css" rel="stylesheet"/>
   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
  </head>
  <body class="antialiased transition-colors duration-300">
@@ -25,9 +25,9 @@
     <div class="flex justify-between items-center h-20">
      <!-- Logo -->
      <div class="flex-shrink-0 flex items-center">
-       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
-        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
-       </a>
+      <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+       <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+      </a>
      </div>
      <!-- Desktop Menu -->
      <nav class="hidden lg:flex space-x-8 items-center">
@@ -49,7 +49,7 @@
       <a class="text-sm nav-link" href="about.html">
        About
       </a>
-      <a class="text-sm nav-link active" href="services.html">
+      <a class="text-sm nav-link" href="services.html">
        Services
       </a>
       <a class="text-sm nav-link" href="niche.html">
@@ -118,7 +118,7 @@
       <i class="ph ph-list mr-2"></i>
       About
      </a>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="services.html">
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
       <i class="ph ph-list mr-2"></i>
       Services
      </a>
@@ -148,123 +148,182 @@
    </div>
   </header>
   <main>
-   <!-- SECTION 1: Detailed service hero section -->
-   <section class="relative h-[70vh] flex items-center justify-center bg-black overflow-hidden">
-    <div class="absolute inset-0 z-0 opacity-60">
-     <img alt="High-End Beauty" class="w-full h-full object-cover img-parallax" src="https://images.unsplash.com/photo-1515347619253-1d009219e273?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"/>
+   <!-- SECTION 1: Featured blog banner -->
+   <section class="relative h-[60vh] md:h-[80vh] flex items-end pb-20 bg-black">
+    <div class="absolute inset-0 z-0">
+     <img alt="Article Banner" class="w-full h-full object-cover opacity-60 img-parallax" src="https://images.unsplash.com/photo-1542451313056-b7c8e626645f?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"/>
     </div>
-    <div class="relative z-10 text-center text-white px-4">
-     <p class="uppercase tracking-[0.3em] text-xs mb-4" data-aos="fade-down">
-      Service Overview
+    <div class="relative z-10 max-w-4xl mx-auto px-4 w-full text-center text-white" data-aos="fade-up">
+     <p class="text-xs font-bold uppercase tracking-widest text-white/70 mb-4">
+      Case Studies • Oct 24, 2026
      </p>
-     <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
-      High-End Beauty
+     <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mb-6">
+      Color Grading for Autumn Editorials
      </h1>
-     <p class="max-w-xl mx-auto text-lg text-white/80" data-aos="fade-up" data-aos-delay="100">
-      Flawless, non-destructive skin retouching for macro beauty and cosmetics campaigns.
+     <p class="text-sm font-medium">
+      By Julian Rossi
      </p>
     </div>
    </section>
-   <!-- SECTION 2: Editing workflow explanation -->
-   <section class="py-24 bg-white dark:bg-black">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-      <div data-aos="fade-right">
-       <h2 class="font-serif text-4xl font-bold mb-6">
-        The Micro-Dodging Technique
+   <!-- SECTION 2 & 3: Article Content & Sidebar -->
+   <section class="py-20 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col lg:flex-row gap-16">
+      <!-- Article Content -->
+      <article class="w-full lg:w-2/3 prose prose-lg dark:prose-invert prose-headings:font-serif prose-a:text-black dark:prose-a:text-white max-w-none" data-aos="fade-up">
+       <p class="lead text-xl text-gray-500 dark:text-gray-400 mb-10 font-serif italic">
+        Achieving a cohesive look across a 20-image editorial spread shot in varying light conditions is the true test of a colorist's skill.
+       </p>
+       <h2>
+        The Challenge
        </h2>
-       <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
-        Unlike basic blurring techniques that destroy skin texture, we utilize pixel-level micro-dodging and burning. This method involves manually lightening shadows and darkening highlights on a microscopic level to smooth out blemishes while retaining 100% of the natural pore structure.
+       <p>
+        When the brief arrived for the Autumn '26 cover story, the requirements were clear: deep, moody tones, rich ochres, and desaturated greens, all while keeping the skin tones luminous and natural.
        </p>
-       <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-        The result is skin that looks flawless yet undeniably real, meeting the rigorous standards of international beauty and cosmetics brands.
+       <img alt="Color grading workspace" class="rounded-xl shadow-lg my-10" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <h2>
+        The Approach
+       </h2>
+       <p>
+        We began by establishing a primary LUT that handled the heavy lifting of the environment colors. We targeted the lush greens of the outdoor location, shifting their hue towards warmer, earthy tones and pulling down their saturation. This immediately gave the images an autumnal feel.
        </p>
-      </div>
-      <div class="relative" data-aos="fade-left">
-       <img alt="Workflow" class="rounded-xl shadow-xl" src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&amp;fit=crop&amp;q=80&amp;w=800"/>
-      </div>
+       <blockquote>
+        "The secret to a cinematic grade is not just what colors you add, but what colors you take away."
+       </blockquote>
+       <p>
+        However, applying a global grade often destroys skin tones. We utilized luminosity masks and advanced blending modes in Capture One to isolate the subject, applying a completely different treatment to the skin to maintain its natural warmth and vitality against the moody background.
+       </p>
+      </article>
+      <!-- Sidebar -->
+      <aside class="w-full lg:w-1/3 space-y-12" data-aos="fade-left">
+       <!-- Author Widget -->
+       <div class="bg-luxury-50 dark:bg-luxury-900 p-8 rounded-2xl text-center">
+        <img alt="Author" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;q=80&amp;w=150"/>
+        <h4 class="font-serif font-bold text-xl mb-2">
+         Julian Rossi
+        </h4>
+        <p class="text-sm text-gray-500 mb-4">
+         Lead Retoucher &amp; Colorist
+        </p>
+        <div class="flex justify-center space-x-4">
+         <a class="text-gray-400 hover:text-black dark:hover:text-white" href="#">
+          <i class="ph ph-instagram-logo">
+          </i>
+         </a>
+         <a class="text-gray-400 hover:text-black dark:hover:text-white" href="#">
+          <i class="ph ph-twitter-logo">
+          </i>
+         </a>
+        </div>
+       </div>
+       <!-- Categories -->
+       <div>
+        <h4 class="font-bold uppercase tracking-widest text-sm border-b border-gray-200 dark:border-gray-800 pb-2 mb-4">
+         Categories
+        </h4>
+        <ul class="space-y-3 text-sm text-gray-500">
+         <li>
+          <a class="hover:text-black dark:hover:text-white flex justify-between" href="#">
+           <span>
+            Technique
+           </span>
+           <span>
+            (12)
+           </span>
+          </a>
+         </li>
+         <li>
+          <a class="hover:text-black dark:hover:text-white flex justify-between" href="#">
+           <span>
+            Industry News
+           </span>
+           <span>
+            (8)
+           </span>
+          </a>
+         </li>
+         <li>
+          <a class="hover:text-black dark:hover:text-white flex justify-between" href="#">
+           <span>
+            Case Studies
+           </span>
+           <span>
+            (5)
+           </span>
+          </a>
+         </li>
+         <li>
+          <a class="hover:text-black dark:hover:text-white flex justify-between" href="#">
+           <span>
+            Interviews
+           </span>
+           <span>
+            (3)
+           </span>
+          </a>
+         </li>
+        </ul>
+       </div>
+       <!-- Tags -->
+       <div>
+        <h4 class="font-bold uppercase tracking-widest text-sm border-b border-gray-200 dark:border-gray-800 pb-2 mb-4">
+         Tags
+        </h4>
+        <div class="flex flex-wrap gap-2">
+         <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded-full text-gray-600 dark:text-gray-400">
+          Color Grading
+         </span>
+         <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded-full text-gray-600 dark:text-gray-400">
+          Capture One
+         </span>
+         <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded-full text-gray-600 dark:text-gray-400">
+          Editorial
+         </span>
+         <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-xs rounded-full text-gray-600 dark:text-gray-400">
+          Workflow
+         </span>
+        </div>
+       </div>
+      </aside>
      </div>
     </div>
    </section>
-   <!-- SECTION 3: Deliverables and pricing table -->
-   <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-     <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">
-      Deliverables &amp; Specs
-     </h2>
-     <div class="bg-white dark:bg-black rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden" data-aos="fade-up">
-      <table class="w-full text-left">
-       <thead class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-        <tr>
-         <th class="p-6 font-bold text-sm uppercase tracking-wider">
-          Feature
-         </th>
-         <th class="p-6 font-bold text-sm uppercase tracking-wider text-right">
-          Details
-         </th>
-        </tr>
-       </thead>
-       <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
-        <tr>
-         <td class="p-6 font-medium">
-          Turnaround Time
-         </td>
-         <td class="p-6 text-gray-500 text-right">
-          3 - 5 Business Days
-         </td>
-        </tr>
-        <tr>
-         <td class="p-6 font-medium">
-          Revisions
-         </td>
-         <td class="p-6 text-gray-500 text-right">
-          Up to 3 Rounds
-         </td>
-        </tr>
-        <tr>
-         <td class="p-6 font-medium">
-          File Formats Delivered
-         </td>
-         <td class="p-6 text-gray-500 text-right">
-          16-bit TIFF &amp; Web JPG
-         </td>
-        </tr>
-        <tr>
-         <td class="p-6 font-medium">
-          Color Space
-         </td>
-         <td class="p-6 text-gray-500 text-right">
-          Adobe RGB / sRGB
-         </td>
-        </tr>
-        <tr class="bg-gray-50 dark:bg-gray-900">
-         <td class="p-6 font-bold text-lg">
-          Base Pricing
-         </td>
-         <td class="p-6 font-bold text-lg text-right">
-          From $120 / image
-         </td>
-        </tr>
-       </tbody>
-      </table>
-     </div>
-    </div>
-   </section>
-   <!-- SECTION 4: FAQ + inquiry CTA -->
-   <section class="py-24 bg-white dark:bg-black text-center">
-    <div class="max-w-2xl mx-auto px-4">
-     <h2 class="font-serif text-4xl font-bold mb-6" data-aos="fade-up">
-      Ready to Start?
-     </h2>
-     <p class="text-gray-500 mb-10" data-aos="fade-up" data-aos-delay="100">
-      Upload a test file via our client portal or contact us directly to discuss your campaign scope.
-     </p>
-     <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4" data-aos="fade-up" data-aos-delay="200">
-      <a class="bg-black text-white dark:bg-white dark:text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider" href="dashboard.html">
-       Upload Test Image
+   <!-- SECTION 4: Related posts section -->
+   <section class="py-24 bg-luxury-50 dark:bg-luxury-900 border-t border-gray-200 dark:border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <h3 class="font-serif text-3xl font-bold mb-10" data-aos="fade-up">
+      Related Articles
+     </h3>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Related 1 -->
+      <a class="group flex gap-6" data-aos="fade-up" href="#">
+       <img class="w-32 h-32 object-cover rounded-xl group-hover:scale-105 transition-transform" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;q=80&amp;w=200"/>
+       <div>
+        <p class="text-xs text-gray-400 font-bold uppercase mb-2">
+         Technique
+        </p>
+        <h4 class="font-serif text-xl font-bold mb-2 group-hover:text-gray-500">
+         Mastering Frequency Separation
+        </h4>
+        <p class="text-sm text-gray-500 line-clamp-2">
+         A deep dive into setting up your actions.
+        </p>
+       </div>
       </a>
-      <a class="border border-black dark:border-white px-8 py-4 rounded-full font-bold uppercase tracking-wider" href="contact.html">
-       Contact Sales
+      <!-- Related 2 -->
+      <a class="group flex gap-6" data-aos="fade-up" data-aos-delay="100" href="#">
+       <img class="w-32 h-32 object-cover rounded-xl group-hover:scale-105 transition-transform" src="https://images.unsplash.com/photo-1550592704-6c76defa99ce?auto=format&amp;fit=crop&amp;q=80&amp;w=200"/>
+       <div>
+        <p class="text-xs text-gray-400 font-bold uppercase mb-2">
+         Industry
+        </p>
+        <h4 class="font-serif text-xl font-bold mb-2 group-hover:text-gray-500">
+         The Future of AI in Retouching
+        </h4>
+        <p class="text-sm text-gray-500 line-clamp-2">
+         How machine learning is speeding up workflows.
+        </p>
+       </div>
       </a>
      </div>
     </div>
@@ -360,7 +419,7 @@
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
   </script>
-  <script src="../assets/js/main.js">
+  <script src="assets/js/main.js">
   </script>
  
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
