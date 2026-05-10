@@ -1,174 +1,508 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - RetouchStudio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
-</head>
-<body class="antialiased transition-colors duration-300">
-
-    <header class="fixed w-full top-0 z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-serif text-2xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html">Home</a>
-                <a href="home2.html">Home 2</a>
-                <a href="services.html" class="font-bold">Services</a>
-            </nav>
-            <div class="hidden md:flex"><a href="dashboard.html" class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full">Client Portal</a></div>
-        </div>
-    </header>
-
-    <main class="pt-32">
-        <!-- SECTION 1: Services grid layout -->
-        <section class="py-12 bg-white dark:bg-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-20">
-                    <p class="text-xs uppercase tracking-widest text-gray-400 mb-4 font-bold" data-aos="fade-up">What We Do</p>
-                    <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">Comprehensive Retouching Solutions</h1>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Grid Item 1 -->
-                    <a href="service-details.html" class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up">
-                        <img src="https://images.unsplash.com/photo-1512413914595-f26019561081?auto=format&fit=crop&q=80&w=1200" alt="Beauty" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
-                            <h3 class="font-serif text-3xl text-white mb-2">High-End Beauty</h3>
-                            <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Flawless skin without losing texture.</p>
-                        </div>
-                    </a>
-                    <!-- Grid Item 2 -->
-                    <a href="service-details.html" class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?auto=format&fit=crop&q=80&w=1200" alt="Fashion" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
-                            <h3 class="font-serif text-3xl text-white mb-2">Fashion Editorial</h3>
-                            <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Garment cleaning and mood grading.</p>
-                        </div>
-                    </a>
-                    <!-- Grid Item 3 -->
-                    <a href="service-details.html" class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up">
-                        <img src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?auto=format&fit=crop&q=80&w=1200" alt="Commercial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
-                            <h3 class="font-serif text-3xl text-white mb-2">Commercial Advertising</h3>
-                            <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Pixel-perfect object removal and compositing.</p>
-                        </div>
-                    </a>
-                    <!-- Grid Item 4 -->
-                    <a href="service-details.html" class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up" data-aos-delay="100">
-                        <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1200" alt="Lookbook" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105">
-                        <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
-                            <h3 class="font-serif text-3xl text-white mb-2">E-Commerce Batch</h3>
-                            <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Consistent quality at high volume.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 2: Fashion retouching specialties -->
-        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-                    <div data-aos="fade-up">
-                        <i class="ph ph-drop text-4xl mb-6"></i>
-                        <h4 class="font-serif text-2xl font-bold mb-4">Color Consistency</h4>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Ensuring your brand's color palette matches precisely across every image in a campaign.</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="100">
-                        <i class="ph ph-magic-wand text-4xl mb-6"></i>
-                        <h4 class="font-serif text-2xl font-bold mb-4">Fabric Sculpting</h4>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Ironing out unwanted creases and pinning garments digitally for the perfect fit.</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <i class="ph ph-scissors text-4xl mb-6"></i>
-                        <h4 class="font-serif text-2xl font-bold mb-4">Complex Compositing</h4>
-                        <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">Merging multiple plates seamlessly to create impossible shots.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: Pricing/service comparison cards -->
-        <section class="py-24 bg-white dark:bg-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">Service Tiers</h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Standard -->
-                    <div class="border border-gray-200 dark:border-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow" data-aos="fade-up">
-                        <h3 class="font-serif text-2xl mb-2">Standard</h3>
-                        <p class="text-gray-500 text-sm mb-6">For e-commerce and lookbooks.</p>
-                        <p class="text-4xl font-bold mb-8">$25 <span class="text-sm font-normal text-gray-500">/ image</span></p>
-                        <ul class="space-y-4 mb-8 text-sm">
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Basic Skin Cleanup</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Color Correction</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Background Cleaning</li>
-                            <li class="flex items-center text-gray-400"><i class="ph ph-x mr-2"></i> Advanced Compositing</li>
-                        </ul>
-                    </div>
-                    <!-- Editorial (Highlighted) -->
-                    <div class="bg-black text-white dark:bg-white dark:text-black rounded-2xl p-8 transform md:-translate-y-4 shadow-2xl relative" data-aos="fade-up" data-aos-delay="100">
-                        <div class="absolute top-0 right-8 transform -translate-y-1/2 bg-white text-black dark:bg-black dark:text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">Popular</div>
-                        <h3 class="font-serif text-2xl mb-2">Editorial</h3>
-                        <p class="text-gray-400 dark:text-gray-500 text-sm mb-6">For magazines and campaigns.</p>
-                        <p class="text-4xl font-bold mb-8">$75 <span class="text-sm font-normal text-gray-400 dark:text-gray-500">/ image</span></p>
-                        <ul class="space-y-4 mb-8 text-sm">
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> High-End Skin Retouching</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Garment Cleaning & Shaping</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Cinematic Color Grading</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> 2 Rounds of Revisions</li>
-                        </ul>
-                    </div>
-                    <!-- Master -->
-                    <div class="border border-gray-200 dark:border-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="font-serif text-2xl mb-2">Master</h3>
-                        <p class="text-gray-500 text-sm mb-6">For billboards and beauty macro.</p>
-                        <p class="text-4xl font-bold mb-8">$150+ <span class="text-sm font-normal text-gray-500">/ image</span></p>
-                        <ul class="space-y-4 mb-8 text-sm">
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Pixel-Perfect Macro Retouching</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Complex Compositing</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Unlimited Revisions</li>
-                            <li class="flex items-center"><i class="ph ph-check mr-2"></i> Dedicated Art Director</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: FAQ accordion section -->
-        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">Frequently Asked Questions</h2>
-                <div class="space-y-4">
-                    <!-- FAQ Item -->
-                    <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up">
-                        <h4 class="font-bold mb-2">What is the typical turnaround time?</h4>
-                        <p class="text-sm text-gray-500">For standard and editorial tiers, we deliver within 48-72 hours. Master retouching may take up to 5 days depending on complexity.</p>
-                    </div>
-                    <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-                        <h4 class="font-bold mb-2">Do you provide bulk discounts?</h4>
-                        <p class="text-sm text-gray-500">Yes, we offer custom pricing for lookbooks and e-commerce batches exceeding 50 images per month.</p>
-                    </div>
-                    <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="font-bold mb-2">How do revisions work?</h4>
-                        <p class="text-sm text-gray-500">Revisions can be requested directly via our Client Portal dashboard. You can leave pin-point comments on the image itself.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-white dark:bg-black py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
-        <p>&copy; 2026 RetouchStudio.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../assets/js/main.js"></script>
-</body>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Services - RAW
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/@phosphor-icons/web">
+  </script>
+   <link href="../assets/css/style.css" rel="stylesheet"/>
+   <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+ </head>
+ <body class="antialiased transition-colors duration-300">
+  <!-- Header / Navbar -->
+  <header class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+     <!-- Logo -->
+     <div class="flex-shrink-0 flex items-center">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+     </div>
+     <!-- Desktop Menu -->
+     <nav class="hidden lg:flex space-x-8 items-center">
+       <div class="relative group h-full inline-flex items-center">
+        <a class="text-sm nav-link" href="index.html">
+         Home
+         <i class="ph ph-caret-down ml-1 text-xs">
+         </i>
+        </a>
+       <div class="absolute top-full left-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <a class="flex items-center px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors border-b border-gray-50 dark:border-gray-800 text-black dark:text-gray-300" href="index.html">
+         Home 1
+        </a>
+        <a class="block px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors text-black dark:text-gray-300" href="home2.html">
+         Home 2
+        </a>
+       </div>
+      </div>
+       <a class="text-sm nav-link" href="about.html">
+        About
+       </a>
+       <a class="text-sm nav-link active" href="services.html">
+        Services
+       </a>
+       <a class="text-sm nav-link" href="niche.html">
+        Fashion
+       </a>
+       <a class="text-sm nav-link" href="portfolio.html">
+        Portfolio
+       </a>
+       <a class="text-sm nav-link" href="contact.html">
+        Contact
+       </a>
+     </nav>
+     <!-- Actions -->
+     <div class="hidden lg:flex items-center space-x-4">
+      <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+       <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+        RTL
+       </button>
+       <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ml-2" href="login.html">
+        Login
+       </a>
+       <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
+        Client Portal
+       </a>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="lg:hidden flex items-center space-x-4">
+              <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+         RTL
+        </button>
+       <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="p-2" id="mobile-menu-btn">
+       <i class="ph ph-list text-2xl">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Menu -->
+   <div class="hidden lg:hidden glass border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+     <div class="space-y-1">
+      <span class="block px-3 py-2 rounded-md text-sm uppercase tracking-[0.2em] font-bold text-black dark:text-white">
+       Home
+      </span>
+      <div class="pl-6 space-y-1">
+       <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 1
+     </a>
+       <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 2
+     </a>
+      </div>
+     </div>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
+      <i class="ph ph-list mr-2"></i>
+      About
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="services.html">
+      <i class="ph ph-list mr-2"></i>
+      Services
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
+      <i class="ph ph-list mr-2"></i>
+      Fashion
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
+      <i class="ph ph-list mr-2"></i>
+      Portfolio
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+      <i class="ph ph-list mr-2"></i>
+      Contact
+     </a>
+      <div class="border-t border-gray-200 dark:border-gray-700 pt-4 pb-2 space-y-3">
+       <a class="block w-full text-center bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-xl text-sm font-bold" href="login.html">
+        Login
+       </a>
+       <a class="block w-full text-center border border-gray-200 dark:border-gray-700 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold" href="dashboard.html">
+        Client Portal
+       </a>
+      </div>
+    </div>
+   </div>
+  </header>
+  <main class="pt-32">
+   <!-- SECTION 1: Services grid layout -->
+   <section class="py-12 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="text-center max-w-3xl mx-auto mb-20">
+      <p class="text-xs uppercase tracking-widest text-gray-400 mb-4 font-bold" data-aos="fade-up">
+       What We Do
+      </p>
+      <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-delay="100">
+       Comprehensive Retouching Solutions
+      </h1>
+     </div>
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Grid Item 1 -->
+      <a class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up" href="service-details.html">
+       <img alt="Beauty" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
+        <h3 class="font-serif text-3xl text-white mb-2">
+         High-End Beauty
+        </h3>
+        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+         Flawless skin without losing texture.
+        </p>
+       </div>
+      </a>
+      <!-- Grid Item 2 -->
+      <a class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up" data-aos-delay="100" href="service-details.html">
+       <img alt="Fashion" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" src="https://images.unsplash.com/photo-1518331647614-7a1f04cd34cf?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
+        <h3 class="font-serif text-3xl text-white mb-2">
+         Fashion Editorial
+        </h3>
+        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+         Garment cleaning and mood grading.
+        </p>
+       </div>
+      </a>
+      <!-- Grid Item 3 -->
+      <a class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up" href="service-details.html">
+       <img alt="Commercial" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1505322022379-7c3353ee6291?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
+        <h3 class="font-serif text-3xl text-white mb-2">
+         Commercial Advertising
+        </h3>
+        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+         Pixel-perfect object removal and compositing.
+        </p>
+       </div>
+      </a>
+      <!-- Grid Item 4 -->
+      <a class="group block relative overflow-hidden rounded-2xl aspect-[16/10]" data-aos="fade-up" data-aos-delay="100" href="service-details.html">
+       <img alt="Lookbook" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-black/50 flex flex-col justify-end p-8">
+        <h3 class="font-serif text-3xl text-white mb-2">
+         E-Commerce Batch
+        </h3>
+        <p class="text-white/70 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+         Consistent quality at high volume.
+        </p>
+       </div>
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION 2: Fashion retouching specialties -->
+   <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+      <div data-aos="fade-up">
+       <i class="ph ph-drop text-4xl mb-6">
+       </i>
+       <h4 class="font-serif text-2xl font-bold mb-4">
+        Color Consistency
+       </h4>
+       <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+        Ensuring your brand's color palette matches precisely across every image in a campaign.
+       </p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+       <i class="ph ph-magic-wand text-4xl mb-6">
+       </i>
+       <h4 class="font-serif text-2xl font-bold mb-4">
+        Fabric Sculpting
+       </h4>
+       <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+        Ironing out unwanted creases and pinning garments digitally for the perfect fit.
+       </p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+       <i class="ph ph-scissors text-4xl mb-6">
+       </i>
+       <h4 class="font-serif text-2xl font-bold mb-4">
+        Complex Compositing
+       </h4>
+       <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+        Merging multiple plates seamlessly to create impossible shots.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION 3: Pricing/service comparison cards -->
+   <section class="py-24 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <h2 class="font-serif text-4xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">
+      Service Tiers
+     </h2>
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Standard -->
+      <div class="border border-gray-200 dark:border-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow" data-aos="fade-up">
+       <h3 class="font-serif text-2xl mb-2">
+        Standard
+       </h3>
+       <p class="text-gray-500 text-sm mb-6">
+        For e-commerce and lookbooks.
+       </p>
+       <p class="text-4xl font-bold mb-8">
+        $25
+        <span class="text-sm font-normal text-gray-500">
+         / image
+        </span>
+       </p>
+       <ul class="space-y-4 mb-8 text-sm">
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Basic Skin Cleanup
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Color Correction
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Background Cleaning
+        </li>
+        <li class="flex items-center text-gray-400">
+         <i class="ph ph-x mr-2">
+         </i>
+         Advanced Compositing
+        </li>
+       </ul>
+      </div>
+      <!-- Editorial (Highlighted) -->
+      <div class="bg-black text-white dark:bg-white dark:text-black rounded-2xl p-8 transform md:-translate-y-4 shadow-2xl relative" data-aos="fade-up" data-aos-delay="100">
+       <div class="absolute top-0 right-8 transform -translate-y-1/2 bg-white text-black dark:bg-black dark:text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">
+        Popular
+       </div>
+       <h3 class="font-serif text-2xl mb-2">
+        Editorial
+       </h3>
+       <p class="text-gray-400 dark:text-gray-500 text-sm mb-6">
+        For magazines and campaigns.
+       </p>
+       <p class="text-4xl font-bold mb-8">
+        $75
+        <span class="text-sm font-normal text-gray-400 dark:text-gray-500">
+         / image
+        </span>
+       </p>
+       <ul class="space-y-4 mb-8 text-sm">
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         High-End Skin Retouching
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Garment Cleaning &amp; Shaping
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Cinematic Color Grading
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         2 Rounds of Revisions
+        </li>
+       </ul>
+      </div>
+      <!-- Master -->
+      <div class="border border-gray-200 dark:border-gray-800 rounded-2xl p-8 hover:shadow-xl transition-shadow" data-aos="fade-up" data-aos-delay="200">
+       <h3 class="font-serif text-2xl mb-2">
+        Master
+       </h3>
+       <p class="text-gray-500 text-sm mb-6">
+        For billboards and beauty macro.
+       </p>
+       <p class="text-4xl font-bold mb-8">
+        $150+
+        <span class="text-sm font-normal text-gray-500">
+         / image
+        </span>
+       </p>
+       <ul class="space-y-4 mb-8 text-sm">
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Pixel-Perfect Macro Retouching
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Complex Compositing
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Unlimited Revisions
+        </li>
+        <li class="flex items-center">
+         <i class="ph ph-check mr-2">
+         </i>
+         Dedicated Art Director
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION 4: FAQ accordion section -->
+   <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+     <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">
+      Frequently Asked Questions
+     </h2>
+     <div class="space-y-4">
+      <!-- FAQ Item -->
+      <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up">
+       <h4 class="font-bold mb-2">
+        What is the typical turnaround time?
+       </h4>
+       <p class="text-sm text-gray-500">
+        For standard and editorial tiers, we deliver within 48-72 hours. Master retouching may take up to 5 days depending on complexity.
+       </p>
+      </div>
+      <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+       <h4 class="font-bold mb-2">
+        Do you provide bulk discounts?
+       </h4>
+       <p class="text-sm text-gray-500">
+        Yes, we offer custom pricing for lookbooks and e-commerce batches exceeding 50 images per month.
+       </p>
+      </div>
+      <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+       <h4 class="font-bold mb-2">
+        How do revisions work?
+       </h4>
+       <p class="text-sm text-gray-500">
+        Revisions can be requested directly via our Client Portal dashboard. You can leave pin-point comments on the image itself.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+     <div class="col-span-1 md:col-span-2">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center mb-6 group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+      <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
+       Premium photo retouching and asset management platform for the world's most demanding fashion photographers.
+      </p>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Platform
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="services.html">
+         Services
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="pricing.html">
+         Pricing
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="dashboard.html">
+         Client Portal
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="blog.html">
+         Journal
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Company
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="about.html">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 text-xs text-gray-400">
+     <p>
+      © 2026 RAW. All rights reserved.
+     </p>
+     <div class="flex space-x-6 mt-4 md:mt-0">
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-instagram-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-twitter-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-behance-logo text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+ 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+ </body>
 </html>

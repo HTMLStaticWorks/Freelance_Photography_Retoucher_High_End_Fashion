@@ -1,8 +1,3 @@
 /* Dark Mode specifics if not handled by Tailwind */
 /* Most dark mode styles will be handled via Tailwind's dark: variant. */
-.dark .bg-white {
-    background-color: #121212 !important;
-}
-.dark .text-gray-900 {
-    color: #e5e7eb !important;
-}
+

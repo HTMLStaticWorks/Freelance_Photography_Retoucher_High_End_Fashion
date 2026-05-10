@@ -1,243 +1,405 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Client Portal - RetouchStudio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
-</head>
-<body class="antialiased bg-gray-50 dark:bg-black transition-colors duration-300">
-
-    <div class="flex h-screen overflow-hidden">
-        
-        <!-- Sidebar -->
-        <aside id="dashboard-sidebar" class="w-64 bg-white dark:bg-luxury-900 border-r border-gray-200 dark:border-gray-800 flex-shrink-0 absolute md:relative z-20 h-full transition-transform transform -translate-x-full md:translate-x-0">
-            <div class="h-20 flex items-center px-6 border-b border-gray-200 dark:border-gray-800">
-                <a href="index.html" class="font-serif text-xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
-            </div>
-            <div class="p-4">
-                <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 px-2">Menu</p>
-                <nav class="space-y-1">
-                    <button data-target="overview" class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors">
-                        <i class="ph ph-squares-four text-lg mr-3 text-gray-500"></i> Overview
-                    </button>
-                    <button data-target="upload" class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors">
-                        <i class="ph ph-upload-simple text-lg mr-3"></i> Upload RAWs
-                    </button>
-                    <button data-target="review" class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors">
-                        <i class="ph ph-chat-circle-dots text-lg mr-3"></i> Review & Revise
-                        <span class="ml-auto bg-black text-white dark:bg-white dark:text-black text-xs py-0.5 px-2 rounded-full">3</span>
-                    </button>
-                    <button data-target="downloads" class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors">
-                        <i class="ph ph-download-simple text-lg mr-3"></i> Downloads
-                    </button>
-                </nav>
-            </div>
-            <div class="absolute bottom-0 w-full p-4 border-t border-gray-200 dark:border-gray-800">
-                <div class="flex items-center">
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=100" class="w-10 h-10 rounded-full object-cover">
-                    <div class="ml-3">
-                        <p class="text-sm font-bold">Marcus Chen</p>
-                        <p class="text-xs text-gray-500">Studio Pro Plan</p>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="flex-1 flex flex-col overflow-hidden relative">
-            
-            <!-- Dashboard Header -->
-            <header class="h-20 bg-white dark:bg-luxury-900 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6 z-10">
-                <div class="flex items-center">
-                    <button id="sidebar-toggle" class="md:hidden mr-4 text-gray-500 hover:text-black dark:hover:text-white">
-                        <i class="ph ph-list text-2xl"></i>
-                    </button>
-                    <h2 class="font-serif text-2xl font-bold">Client Portal</h2>
-                </div>
-                <div class="flex items-center space-x-4">
-                    <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                        <i class="ph ph-moon text-xl dark:hidden"></i>
-                        <i class="ph ph-sun text-xl hidden dark:block"></i>
-                    </button>
-                    <a href="index.html" class="text-sm font-bold uppercase tracking-wider text-gray-500 hover:text-black dark:hover:text-white">Exit</a>
-                </div>
-            </header>
-
-            <!-- Scrollable Area -->
-            <div class="flex-1 overflow-y-auto p-6 md:p-10">
-                
-                <!-- AREA 1: Analytics and statistics overview -->
-                <div id="overview" class="tab-content block" data-aos="fade-in">
-                    <h3 class="text-xl font-bold mb-6">Welcome back, Marcus</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
-                        <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-                            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Active Projects</p>
-                            <p class="text-3xl font-serif">2</p>
-                        </div>
-                        <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-                            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Images Processing</p>
-                            <p class="text-3xl font-serif">24</p>
-                        </div>
-                        <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-                            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Pending Review</p>
-                            <p class="text-3xl font-serif text-yellow-500">3</p>
-                        </div>
-                        <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
-                            <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">Ready to Download</p>
-                            <p class="text-3xl font-serif text-green-500">12</p>
-                        </div>
-                    </div>
-                    
-                    <h4 class="font-bold mb-4">Recent Activity</h4>
-                    <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm">
-                        <ul class="space-y-4">
-                            <li class="flex items-center text-sm">
-                                <div class="w-2 h-2 rounded-full bg-green-500 mr-4"></div>
-                                <span class="flex-1 font-medium">Vogue Editorial Batch completed</span>
-                                <span class="text-gray-400">2 hours ago</span>
-                            </li>
-                            <li class="flex items-center text-sm">
-                                <div class="w-2 h-2 rounded-full bg-yellow-500 mr-4"></div>
-                                <span class="flex-1 font-medium">New revision requested for IMG_8922.CR2</span>
-                                <span class="text-gray-400">Yesterday</span>
-                            </li>
-                            <li class="flex items-center text-sm">
-                                <div class="w-2 h-2 rounded-full bg-blue-500 mr-4"></div>
-                                <span class="flex-1 font-medium">Uploaded 24 RAW files for Lookbook Autumn</span>
-                                <span class="text-gray-400">Oct 12</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- AREA 2: RAW file upload and asset management system -->
-                <div id="upload" class="tab-content hidden" data-aos="fade-in">
-                    <h3 class="text-xl font-bold mb-6">Upload Assets</h3>
-                    <div class="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-xl p-16 text-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer mb-8">
-                        <i class="ph ph-upload-simple text-4xl text-gray-400 mb-4"></i>
-                        <h4 class="font-bold text-lg mb-2">Drag & Drop RAW files here</h4>
-                        <p class="text-sm text-gray-500">Supports .CR2, .NEF, .ARW, and .DNG (Max 100MB per file)</p>
-                        <button class="mt-6 px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full font-bold uppercase tracking-wider text-sm">Browse Files</button>
-                    </div>
-                    
-                    <h4 class="font-bold mb-4">Upload Queue</h4>
-                    <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
-                        <div class="flex items-center justify-between mb-4 text-sm border-b border-gray-100 dark:border-gray-800 pb-4">
-                            <span class="font-medium flex items-center"><i class="ph ph-file-image mr-2 text-gray-400"></i> IMG_8944.CR2</span>
-                            <span class="text-green-500"><i class="ph ph-check"></i> Uploaded</span>
-                        </div>
-                        <div class="flex items-center justify-between text-sm">
-                            <span class="font-medium flex items-center"><i class="ph ph-file-image mr-2 text-gray-400"></i> IMG_8945.CR2</span>
-                            <div class="w-1/3 mx-4 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
-                                <div class="bg-black dark:bg-white h-1.5 rounded-full" style="width: 45%"></div>
-                            </div>
-                            <span class="text-gray-500">45%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AREA 3: Client approval/messages/revision management -->
-                <div id="review" class="tab-content hidden" data-aos="fade-in">
-                    <h3 class="text-xl font-bold mb-6">Pending Review</h3>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        <!-- Image item -->
-                        <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
-                            <div class="aspect-[4/5] relative group cursor-pointer">
-                                <img src="https://images.unsplash.com/photo-1544365558-35aa4af4154c?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
-                                <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                    <button class="bg-white text-black px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">Add Comment</button>
-                                </div>
-                            </div>
-                            <div class="p-4 flex justify-between items-center">
-                                <p class="text-sm font-bold">VOGUE_01.tif</p>
-                                <div class="space-x-2">
-                                    <button class="text-red-500 hover:bg-red-50 p-1 rounded"><i class="ph ph-x-circle text-xl"></i></button>
-                                    <button class="text-green-500 hover:bg-green-50 p-1 rounded"><i class="ph ph-check-circle text-xl"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Revisions Panel -->
-                        <div class="lg:col-span-2 bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col">
-                            <h4 class="font-bold mb-4 border-b border-gray-100 dark:border-gray-800 pb-2">Messages & Revisions: VOGUE_01.tif</h4>
-                            <div class="flex-1 space-y-4 mb-4">
-                                <!-- Message -->
-                                <div class="flex gap-4">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=50" class="w-8 h-8 rounded-full object-cover">
-                                    <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg rounded-tl-none">
-                                        <p class="text-xs font-bold mb-1">Julian (Retoucher)</p>
-                                        <p class="text-sm">I've completed the initial pass on the skin and color graded to match the moodboard. Let me know what you think.</p>
-                                    </div>
-                                </div>
-                                <!-- Message Reply -->
-                                <div class="flex gap-4 flex-row-reverse">
-                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=50" class="w-8 h-8 rounded-full object-cover">
-                                    <div class="bg-black text-white dark:bg-white dark:text-black p-3 rounded-lg rounded-tr-none">
-                                        <p class="text-sm">Skin looks perfect. Can we slightly desaturate the greens in the background? Just a touch.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="mt-auto relative">
-                                <input type="text" placeholder="Type your revision request..." class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg pl-4 pr-12 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white">
-                                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 hover:text-gray-500"><i class="ph ph-paper-plane-right text-lg"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AREA 4: Download center and order tracking -->
-                <div id="downloads" class="tab-content hidden" data-aos="fade-in">
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-xl font-bold">Download Center</h3>
-                        <button class="bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">Download All (Zip)</button>
-                    </div>
-                    
-                    <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
-                        <table class="w-full text-left text-sm">
-                            <thead class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                                <tr>
-                                    <th class="p-4 font-bold uppercase tracking-wider text-xs">Filename</th>
-                                    <th class="p-4 font-bold uppercase tracking-wider text-xs">Project</th>
-                                    <th class="p-4 font-bold uppercase tracking-wider text-xs">Format</th>
-                                    <th class="p-4 font-bold uppercase tracking-wider text-xs text-right">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
-                                <tr>
-                                    <td class="p-4 font-medium flex items-center"><i class="ph-fill ph-check-circle text-green-500 mr-2"></i> EDIT_FINAL_01.tif</td>
-                                    <td class="p-4 text-gray-500">Lookbook Autumn</td>
-                                    <td class="p-4 text-gray-500">16-bit TIFF (120MB)</td>
-                                    <td class="p-4 text-right"><button class="hover:text-gray-500"><i class="ph ph-download-simple text-xl"></i></button></td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-medium flex items-center"><i class="ph-fill ph-check-circle text-green-500 mr-2"></i> EDIT_FINAL_01_web.jpg</td>
-                                    <td class="p-4 text-gray-500">Lookbook Autumn</td>
-                                    <td class="p-4 text-gray-500">sRGB JPG (4MB)</td>
-                                    <td class="p-4 text-right"><button class="hover:text-gray-500"><i class="ph ph-download-simple text-xl"></i></button></td>
-                                </tr>
-                                <tr>
-                                    <td class="p-4 font-medium flex items-center"><i class="ph-fill ph-check-circle text-green-500 mr-2"></i> EDIT_FINAL_02.tif</td>
-                                    <td class="p-4 text-gray-500">Lookbook Autumn</td>
-                                    <td class="p-4 text-gray-500">16-bit TIFF (115MB)</td>
-                                    <td class="p-4 text-right"><button class="hover:text-gray-500"><i class="ph ph-download-simple text-xl"></i></button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-            </div>
-        </main>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Client Portal - RAW
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/@phosphor-icons/web">
+  </script>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
+  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+ </head>
+ <body class="antialiased bg-gray-50 dark:bg-black transition-colors duration-300">
+  <div class="flex h-screen overflow-hidden">
+   <!-- Sidebar -->
+   <aside class="w-64 bg-white dark:bg-luxury-900 border-r border-gray-200 dark:border-gray-800 flex-shrink-0 absolute md:relative z-20 h-full transition-transform transform -translate-x-full md:translate-x-0" id="dashboard-sidebar">
+    <div class="h-20 flex items-center px-6 border-b border-gray-200 dark:border-gray-800">
+     <a class="font-serif text-xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+      <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+     </a>
     </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../assets/js/dashboard.js"></script>
-    <script src="../assets/js/main.js"></script>
-</body>
+    <div class="p-4">
+     <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 px-2">
+      Menu
+     </p>
+     <nav class="space-y-1">
+      <button class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white transition-colors" data-target="overview">
+       <i class="ph ph-squares-four text-lg mr-3 text-gray-500">
+       </i>
+       Overview
+      </button>
+      <button class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors" data-target="upload">
+       <i class="ph ph-upload-simple text-lg mr-3">
+       </i>
+       Upload RAWs
+      </button>
+      <button class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors" data-target="review">
+       <i class="ph ph-chat-circle-dots text-lg mr-3">
+       </i>
+       Review &amp; Revise
+       <span class="ml-auto bg-black text-white dark:bg-white dark:text-black text-xs py-0.5 px-2 rounded-full">
+        3
+       </span>
+      </button>
+      <button class="tab-btn w-full flex items-center px-4 py-3 text-sm font-medium rounded-lg text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-colors" data-target="downloads">
+       <i class="ph ph-download-simple text-lg mr-3">
+       </i>
+       Downloads
+      </button>
+     </nav>
+    </div>
+    <div class="absolute bottom-0 w-full p-4 border-t border-gray-200 dark:border-gray-800">
+     <div class="flex items-center">
+      <img class="w-10 h-10 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;q=80&amp;w=100"/>
+      <div class="ml-3">
+       <p class="text-sm font-bold">
+        Marcus Chen
+       </p>
+       <p class="text-xs text-gray-500">
+        Studio Pro Plan
+       </p>
+      </div>
+     </div>
+    </div>
+   </aside>
+   <!-- Main Content -->
+   <main class="flex-1 flex flex-col overflow-hidden relative">
+    <!-- Dashboard Header -->
+    <header class="h-20 bg-white dark:bg-luxury-900 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between px-6 z-10">
+     <div class="flex items-center">
+      <button class="md:hidden mr-4 text-gray-500 hover:text-black dark:hover:text-white" id="sidebar-toggle">
+       <i class="ph ph-list text-2xl">
+       </i>
+      </button>
+      <h2 class="font-serif text-2xl font-bold">
+       Client Portal
+      </h2>
+     </div>
+     <div class="flex items-center space-x-4">
+      <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+       RTL
+      </button>
+      <a class="text-sm font-bold uppercase tracking-wider text-gray-500 hover:text-black dark:hover:text-white" href="index.html">
+       Exit
+      </a>
+     </div>
+    </header>
+    <!-- Scrollable Area -->
+    <div class="flex-1 overflow-y-auto p-6 md:p-10">
+     <!-- AREA 1: Analytics and statistics overview -->
+     <div class="tab-content block" data-aos="fade-in" id="overview">
+      <h3 class="text-xl font-bold mb-6">
+       Welcome back, Marcus
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+       <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+         Active Projects
+        </p>
+        <p class="text-3xl font-serif">
+         2
+        </p>
+       </div>
+       <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+         Images Processing
+        </p>
+        <p class="text-3xl font-serif">
+         24
+        </p>
+       </div>
+       <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+         Pending Review
+        </p>
+        <p class="text-3xl font-serif text-yellow-500">
+         3
+        </p>
+       </div>
+       <div class="bg-white dark:bg-luxury-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm">
+        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">
+         Ready to Download
+        </p>
+        <p class="text-3xl font-serif text-green-500">
+         12
+        </p>
+       </div>
+      </div>
+      <h4 class="font-bold mb-4">
+       Recent Activity
+      </h4>
+      <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 shadow-sm">
+       <ul class="space-y-4">
+        <li class="flex items-center text-sm">
+         <div class="w-2 h-2 rounded-full bg-green-500 mr-4">
+         </div>
+         <span class="flex-1 font-medium">
+          Vogue Editorial Batch completed
+         </span>
+         <span class="text-gray-400">
+          2 hours ago
+         </span>
+        </li>
+        <li class="flex items-center text-sm">
+         <div class="w-2 h-2 rounded-full bg-yellow-500 mr-4">
+         </div>
+         <span class="flex-1 font-medium">
+          New revision requested for IMG_8922.CR2
+         </span>
+         <span class="text-gray-400">
+          Yesterday
+         </span>
+        </li>
+        <li class="flex items-center text-sm">
+         <div class="w-2 h-2 rounded-full bg-blue-500 mr-4">
+         </div>
+         <span class="flex-1 font-medium">
+          Uploaded 24 RAW files for Lookbook Autumn
+         </span>
+         <span class="text-gray-400">
+          Oct 12
+         </span>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <!-- AREA 2: RAW file upload and asset management system -->
+     <div class="tab-content hidden" data-aos="fade-in" id="upload">
+      <h3 class="text-xl font-bold mb-6">
+       Upload Assets
+      </h3>
+      <div class="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-xl p-16 text-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer mb-8">
+       <i class="ph ph-upload-simple text-4xl text-gray-400 mb-4">
+       </i>
+       <h4 class="font-bold text-lg mb-2">
+        Drag &amp; Drop RAW files here
+       </h4>
+       <p class="text-sm text-gray-500">
+        Supports .CR2, .NEF, .ARW, and .DNG (Max 100MB per file)
+       </p>
+       <button class="mt-6 px-6 py-2 bg-black text-white dark:bg-white dark:text-black rounded-full font-bold uppercase tracking-wider text-sm">
+        Browse Files
+       </button>
+      </div>
+      <h4 class="font-bold mb-4">
+       Upload Queue
+      </h4>
+      <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6">
+       <div class="flex items-center justify-between mb-4 text-sm border-b border-gray-100 dark:border-gray-800 pb-4">
+        <span class="font-medium flex items-center">
+         <i class="ph ph-file-image mr-2 text-gray-400">
+         </i>
+         IMG_8944.CR2
+        </span>
+        <span class="text-green-500">
+         <i class="ph ph-check">
+         </i>
+         Uploaded
+        </span>
+       </div>
+       <div class="flex items-center justify-between text-sm">
+        <span class="font-medium flex items-center">
+         <i class="ph ph-file-image mr-2 text-gray-400">
+         </i>
+         IMG_8945.CR2
+        </span>
+        <div class="w-1/3 mx-4 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
+         <div class="bg-black dark:bg-white h-1.5 rounded-full" style="width: 45%">
+         </div>
+        </div>
+        <span class="text-gray-500">
+         45%
+        </span>
+       </div>
+      </div>
+     </div>
+     <!-- AREA 3: Client approval/messages/revision management -->
+     <div class="tab-content hidden" data-aos="fade-in" id="review">
+      <h3 class="text-xl font-bold mb-6">
+       Pending Review
+      </h3>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+       <!-- Image item -->
+       <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
+        <div class="aspect-[4/5] relative group cursor-pointer">
+         <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&amp;fit=crop&amp;q=80&amp;w=800"/>
+         <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+          <button class="bg-white text-black px-4 py-2 rounded-full text-sm font-bold uppercase tracking-wider">
+           Add Comment
+          </button>
+         </div>
+        </div>
+        <div class="p-4 flex justify-between items-center">
+         <p class="text-sm font-bold">
+          VOGUE_01.tif
+         </p>
+         <div class="space-x-2">
+          <button class="text-red-500 hover:bg-red-50 p-1 rounded">
+           <i class="ph ph-x-circle text-xl">
+           </i>
+          </button>
+          <button class="text-green-500 hover:bg-green-50 p-1 rounded">
+           <i class="ph ph-check-circle text-xl">
+           </i>
+          </button>
+         </div>
+        </div>
+       </div>
+       <!-- Revisions Panel -->
+       <div class="lg:col-span-2 bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 p-6 flex flex-col">
+        <h4 class="font-bold mb-4 border-b border-gray-100 dark:border-gray-800 pb-2">
+         Messages &amp; Revisions: VOGUE_01.tif
+        </h4>
+        <div class="flex-1 space-y-4 mb-4">
+         <!-- Message -->
+         <div class="flex gap-4">
+          <img class="w-8 h-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;q=80&amp;w=50"/>
+          <div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg rounded-tl-none">
+           <p class="text-xs font-bold mb-1">
+            Julian (Retoucher)
+           </p>
+           <p class="text-sm">
+            I've completed the initial pass on the skin and color graded to match the moodboard. Let me know what you think.
+           </p>
+          </div>
+         </div>
+         <!-- Message Reply -->
+         <div class="flex gap-4 flex-row-reverse">
+          <img class="w-8 h-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;q=80&amp;w=50"/>
+          <div class="bg-black text-white dark:bg-white dark:text-black p-3 rounded-lg rounded-tr-none">
+           <p class="text-sm">
+            Skin looks perfect. Can we slightly desaturate the greens in the background? Just a touch.
+           </p>
+          </div>
+         </div>
+        </div>
+        <div class="mt-auto relative">
+         <input class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg pl-4 pr-12 py-3 text-sm focus:outline-none focus:border-black dark:focus:border-white" placeholder="Type your revision request..." type="text"/>
+         <button class="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 hover:text-gray-500">
+          <i class="ph ph-paper-plane-right text-lg">
+          </i>
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- AREA 4: Download center and order tracking -->
+     <div class="tab-content hidden" data-aos="fade-in" id="downloads">
+      <div class="flex justify-between items-center mb-6">
+       <h3 class="text-xl font-bold">
+        Download Center
+       </h3>
+       <button class="bg-black text-white dark:bg-white dark:text-black px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider">
+        Download All (Zip)
+       </button>
+      </div>
+      <div class="bg-white dark:bg-luxury-900 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden shadow-sm">
+       <table class="w-full text-left text-sm">
+        <thead class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+         <tr>
+          <th class="p-4 font-bold uppercase tracking-wider text-xs">
+           Filename
+          </th>
+          <th class="p-4 font-bold uppercase tracking-wider text-xs">
+           Project
+          </th>
+          <th class="p-4 font-bold uppercase tracking-wider text-xs">
+           Format
+          </th>
+          <th class="p-4 font-bold uppercase tracking-wider text-xs text-right">
+           Action
+          </th>
+         </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 dark:divide-gray-800">
+         <tr>
+          <td class="p-4 font-medium flex items-center">
+           <i class="ph-fill ph-check-circle text-green-500 mr-2">
+           </i>
+           EDIT_FINAL_01.tif
+          </td>
+          <td class="p-4 text-gray-500">
+           Lookbook Autumn
+          </td>
+          <td class="p-4 text-gray-500">
+           16-bit TIFF (120MB)
+          </td>
+          <td class="p-4 text-right">
+           <button class="hover:text-gray-500">
+            <i class="ph ph-download-simple text-xl">
+            </i>
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td class="p-4 font-medium flex items-center">
+           <i class="ph-fill ph-check-circle text-green-500 mr-2">
+           </i>
+           EDIT_FINAL_01_web.jpg
+          </td>
+          <td class="p-4 text-gray-500">
+           Lookbook Autumn
+          </td>
+          <td class="p-4 text-gray-500">
+           sRGB JPG (4MB)
+          </td>
+          <td class="p-4 text-right">
+           <button class="hover:text-gray-500">
+            <i class="ph ph-download-simple text-xl">
+            </i>
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td class="p-4 font-medium flex items-center">
+           <i class="ph-fill ph-check-circle text-green-500 mr-2">
+           </i>
+           EDIT_FINAL_02.tif
+          </td>
+          <td class="p-4 text-gray-500">
+           Lookbook Autumn
+          </td>
+          <td class="p-4 text-gray-500">
+           16-bit TIFF (115MB)
+          </td>
+          <td class="p-4 text-right">
+           <button class="hover:text-gray-500">
+            <i class="ph ph-download-simple text-xl">
+            </i>
+           </button>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+     </div>
+    </div>
+   </main>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="../assets/js/dashboard.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+ 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+ </body>
 </html>

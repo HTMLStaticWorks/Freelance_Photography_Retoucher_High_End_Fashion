@@ -14,9 +14,9 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Login - RAW Premium Retouching
+   Create Account - RAW Premium Retouching
   </title>
-  <meta content="Login to your RAW account to manage your retouching projects." name="description"/>
+  <meta content="Join RAW and elevate your photography with our premium retouching services." name="description"/>
   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -65,11 +65,11 @@
   <main class="min-h-screen flex items-center justify-center relative overflow-hidden px-4">
     <!-- Background Image -->
     <div class="absolute inset-0 z-0">
-      <img alt="Fashion Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=2000"/>
+      <img alt="Fashion Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1492707892479-7bc8d5a4ee93?auto=format&fit=crop&q=80&w=2000"/>
       <div class="absolute inset-0 bg-black/30 dark:bg-black/60 backdrop-blur-sm"></div>
     </div>
 
-    <!-- Login Container -->
+    <!-- Signup Container -->
     <div class="relative z-10 w-full max-w-md" data-aos="fade-up">
         <div class="glass-card rounded-3xl p-8 md:p-10 shadow-2xl">
             <!-- Logo -->
@@ -77,10 +77,14 @@
                 <a class="font-serif text-3xl font-bold tracking-[0.3em] inline-flex items-center group" href="index.html">
                     <span class="logo-bolt mr-3">⚡</span>RAW
                 </a>
-                <p class="text-gray-500 dark:text-gray-400 mt-4 text-sm font-medium uppercase tracking-widest">Welcome Back</p>
+                <p class="text-gray-500 dark:text-gray-400 mt-4 text-sm font-medium uppercase tracking-widest">Join the Elite</p>
             </div>
 
-            <form class="space-y-6">
+            <form class="space-y-5">
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" for="full-name">Full Name</label>
+                    <input class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all text-sm" id="full-name" placeholder="Alexander McQueen" type="text" required/>
+                </div>
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" for="email">Email Address</label>
                     <input class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all text-sm" id="email" placeholder="name@example.com" type="email" required/>
@@ -88,26 +92,27 @@
                 <div>
                     <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-2" for="password">Password</label>
                     <div class="relative">
-                        <input class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all text-sm" id="password" placeholder="••••••••" type="password" required/>
+                        <input class="w-full bg-white/50 dark:bg-black/50 border border-gray-200 dark:border-gray-800 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all text-sm" id="password" placeholder="Create a strong password" type="password" required/>
                         <button type="button" id="toggle-password" class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-black dark:hover:text-white transition-colors">
                             <i class="ph ph-eye text-xl" id="eye-icon"></i>
                         </button>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center">
-                        <input type="checkbox" id="remember" class="w-4 h-4 rounded border-gray-300 text-black focus:ring-black">
-                        <label for="remember" class="ml-2 text-xs text-gray-500 dark:text-gray-400 font-medium">Remember for 30 days</label>
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                        <input type="checkbox" id="terms" class="w-4 h-4 rounded border-gray-300 text-black focus:ring-black" required>
                     </div>
-                    <a href="#" class="text-[10px] uppercase font-bold tracking-widest text-gray-400 hover:text-black dark:hover:text-white transition-colors">Forgot password?</a>
+                    <label for="terms" class="ml-2 text-xs text-gray-500 dark:text-gray-400 font-medium">
+                        I agree to the <a href="#" class="text-black dark:text-white underline underline-offset-2">Terms of Service</a> and <a href="#" class="text-black dark:text-white underline underline-offset-2">Privacy Policy</a>
+                    </label>
                 </div>
 
                 <button class="w-full bg-black dark:bg-white text-white dark:text-black font-bold py-4 rounded-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg" type="submit">
-                    Login
+                    Create Account
                 </button>
 
-                <!-- Social Login -->
+                <!-- Social Signup -->
                 <div class="relative py-4">
                     <div class="absolute inset-0 flex items-center">
                         <div class="w-full border-t border-gray-200 dark:border-gray-800"></div>
@@ -131,8 +136,8 @@
 
             <div class="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 text-center">
                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                    Don't have an account? 
-                    <a href="signup.html" class="text-black dark:text-white font-bold hover:underline underline-offset-4 ml-1">Create Account</a>
+                    Already have an account? 
+                    <a href="login.html" class="text-black dark:text-white font-bold hover:underline underline-offset-4 ml-1">Sign In</a>
                 </p>
             </div>
         </div>

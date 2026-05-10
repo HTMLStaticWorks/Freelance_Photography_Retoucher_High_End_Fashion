@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Fashion &amp; Editorial - RAW
+  </title>
+  <!-- Tailwind CSS (CDN for Template) -->
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        luxury: {
+                            50: '#f7f7f8',
+                            100: '#efeff1',
+                            200: '#dcdce0',
+                            300: '#bebec6',
+                            400: '#9b9ba6',
+                            500: '#7e7e8b',
+                            600: '#646471',
+                            700: '#53535d',
+                            800: '#46464d',
+                            900: '#1a1a1a',
+                        }
+                    }
+                }
+            }
+        }
+  </script>
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <!-- Swiper CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet"/>
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web">
+  </script>
+  <!-- Custom CSS -->
+   <link href="../assets/css/style.css" rel="stylesheet"/>
+   <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+   <link href="../assets/css/rtl.css" rel="stylesheet"/>
+  </link>
+ </head>
+ <body class="antialiased transition-colors duration-300">
+  <!-- Header / Navbar -->
+  <!-- Header / Navbar -->
+  <header class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+     <!-- Logo -->
+     <div class="flex-shrink-0 flex items-center">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+     </div>
+     <!-- Desktop Menu -->
+     <nav class="hidden lg:flex space-x-8 items-center">
+       <div class="relative group h-full inline-flex items-center">
+        <a class="text-sm nav-link" href="index.html">
+         Home
+         <i class="ph ph-caret-down ml-1 text-xs">
+         </i>
+        </a>
+       <div class="absolute top-full left-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <a class="flex items-center px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors border-b border-gray-50 dark:border-gray-800 text-black dark:text-gray-300" href="index.html">
+         Home 1
+        </a>
+        <a class="block px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors text-black dark:text-gray-300" href="home2.html">
+         Home 2
+        </a>
+       </div>
+      </div>
+       <a class="text-sm nav-link" href="about.html">
+        About
+       </a>
+       <a class="text-sm nav-link" href="services.html">
+        Services
+       </a>
+       <a class="text-sm nav-link active" href="niche.html">
+        Fashion
+       </a>
+       <a class="text-sm nav-link" href="portfolio.html">
+        Portfolio
+       </a>
+       <a class="text-sm nav-link" href="contact.html">
+        Contact
+       </a>
+     </nav>
+     <!-- Actions -->
+     <div class="hidden lg:flex items-center space-x-4">
+      <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+       RTL
+      </button>
+       <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ml-2" href="login.html">
+        Login
+       </a>
+
+      <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
+       Client Portal
+      </a>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="lg:hidden flex items-center space-x-4">
+              <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+         RTL
+        </button>
+       <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="p-2" id="mobile-menu-btn">
+       <i class="ph ph-list text-2xl">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Menu -->
+   <div class="hidden lg:hidden glass border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+     <div class="space-y-1">
+      <span class="block px-3 py-2 rounded-md text-sm uppercase tracking-[0.2em] font-bold text-black dark:text-white">
+       Home
+      </span>
+      <div class="pl-6 space-y-1">
+       <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 1
+     </a>
+       <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 2
+     </a>
+      </div>
+     </div>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
+      <i class="ph ph-list mr-2"></i>
+      About
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
+      <i class="ph ph-list mr-2"></i>
+      Services
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="niche.html">
+      <i class="ph ph-list mr-2"></i>
+      Fashion
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
+      <i class="ph ph-list mr-2"></i>
+      Portfolio
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+      <i class="ph ph-list mr-2"></i>
+      Contact
+     </a>
+     <div class="border-t border-gray-200 dark:border-gray-700 pt-2 pb-2">
+
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="dashboard.html">
+      <i class="ph ph-list mr-2"></i>
+      Client Portal
+     </a>
+     </div>
+    </div>
+   </div>
+  </header>
+  <main>
+   <!-- Hero Section -->
+   <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+     <img alt="Fashion Editorial" class="w-full h-full object-cover object-[center_15%] img-parallax scale-105" data-aos="zoom-out" data-aos-duration="2000" src="../assets/images/fashion_hero_v3.png"/>
+     <div class="absolute inset-0 bg-black/60">
+     </div>
+    </div>
+    <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
+     <p class="text-white/80 uppercase tracking-[0.3em] text-sm mb-6 font-medium" data-aos="fade-up" data-aos-delay="100">
+      Specialized Niche
+     </p>
+     <h1 class="font-serif text-5xl md:text-7xl text-white font-bold leading-tight mb-8" data-aos="fade-up" data-aos-delay="300">
+      Fashion &amp;
+      <span class="italic font-light">
+       Editorial
+      </span>
+     </h1>
+     <p class="text-white/90 text-lg md:text-xl font-light max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="500">
+      Elevating the visual narrative for the world's most prestigious luxury brands and fashion publications.
+     </p>
+    </div>
+   </section>
+   <!-- SECTION: Beauty Retouching -->
+   <section class="py-24 bg-white dark:bg-black overflow-hidden" id="beauty">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col md:flex-row items-center gap-16">
+      <div class="w-full md:w-1/2" data-aos="fade-right">
+       <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        Beauty Retouching
+       </h2>
+       <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">
+        Flawless skin doesn't mean artificial. Our high-end beauty retouching focuses on preserving natural pores and texture while eliminating distractions. We specialize in macro-level detail, ensuring perfection for cosmetic campaigns and beauty editorials.
+       </p>
+       <ul class="space-y-4 mb-8">
+        <li class="flex items-center text-sm font-medium">
+         <i class="ph ph-check-circle text-xl mr-3">
+         </i>
+         Frequency Separation Techniques
+        </li>
+        <li class="flex items-center text-sm font-medium">
+         <i class="ph ph-check-circle text-xl mr-3">
+         </i>
+         Dodge &amp; Burn Micro-sculpting
+        </li>
+        <li class="flex items-center text-sm font-medium">
+         <i class="ph ph-check-circle text-xl mr-3">
+         </i>
+         Stray Hair Removal &amp; Shaping
+        </li>
+       </ul>
+       <a class="inline-flex items-center text-sm font-bold uppercase tracking-widest border-b-2 border-black dark:border-white pb-1 hover:text-gray-500 transition-colors" href="contact.html">
+        Start a Project
+        <i class="ph ph-arrow-right ml-2">
+        </i>
+       </a>
+      </div>
+      <div class="w-full md:w-1/2" data-aos="fade-left">
+       <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
+        <img alt="Beauty Retouching Macro" class="w-full h-full object-cover" src="../assets/images/fashion_beauty.png"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION: Fashion Campaigns -->
+   <section class="py-24 bg-luxury-50 dark:bg-luxury-900 overflow-hidden" id="campaigns">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+      <div class="w-full md:w-1/2" data-aos="fade-left">
+       <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        Fashion Campaigns
+       </h2>
+       <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">
+        Consistency is key across a global fashion campaign. We provide precise color grading, background cleaning, and fabric sculpting to ensure the designer's vision is communicated perfectly across all lookbook images and hero shots.
+       </p>
+       <ul class="space-y-4 mb-8">
+        <li class="flex items-center text-sm font-medium">
+         <i class="ph ph-check-circle text-xl mr-3">
+         </i>
+         Garment Crease Removal
+        </li>
+        <li class="flex items-center text-sm font-medium">
+         <i class="ph ph-check-circle text-xl mr-3">
+         </i>
+         Precise Color Matching
+        </li>
+        <li class="flex items-center text-sm font-medium">
+         <i class="ph ph-check-circle text-xl mr-3">
+         </i>
+         Background Extensions &amp; Cleanup
+        </li>
+       </ul>
+      </div>
+      <div class="w-full md:w-1/2" data-aos="fade-right">
+       <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
+        <img alt="Fashion Campaign" class="w-full h-full object-cover object-top" src="../assets/images/fashion_campaigns.png"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION: Editorial Work -->
+   <section class="py-24 bg-white dark:bg-black overflow-hidden" id="editorial">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col md:flex-row items-center gap-16">
+      <div class="w-full md:w-1/2" data-aos="fade-right">
+       <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        Editorial Work
+       </h2>
+       <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">
+        Editorial photography demands mood, atmosphere, and a strong narrative. We collaborate closely with photographers to enhance the lighting, refine the subject, and apply cinematic color grading that fits the publication's aesthetic.
+       </p>
+      </div>
+      <div class="w-full md:w-1/2" data-aos="fade-left">
+       <div class="relative rounded-2xl overflow-hidden aspect-[16/9] shadow-2xl">
+        <img alt="Editorial Fashion" class="w-full h-full object-cover" src="../assets/images/fashion_editorial.png"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION: Before & After -->
+   <section class="py-24 bg-black text-white overflow-hidden relative" id="before-after">
+    <div class="absolute inset-0 opacity-20">
+     <img class="w-full h-full object-cover grayscale" src="../assets/images/fashion_before_after.png"/>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6" data-aos="fade-up">
+       The Transformation
+      </h2>
+      <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="100">
+       Witness the meticulous attention to detail that separates raw captures from finalized luxury assets.
+      </p>
+     </div>
+     <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-800" data-aos="zoom-in">
+      <img alt="Before and After Retouching" class="w-full h-auto" src="../assets/images/fashion_before_after.png"/>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION: Composites -->
+   <section class="py-24 bg-white dark:bg-black overflow-hidden" id="composites">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="flex flex-col md:flex-row-reverse items-center gap-16">
+      <div class="w-full md:w-1/2" data-aos="fade-left">
+       <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">
+        Composites &amp; CGI
+       </h2>
+       <p class="text-gray-500 dark:text-gray-400 text-lg leading-relaxed mb-8">
+        When the creative vision extends beyond the limits of a single frame, our compositing team builds impossible worlds. We seamlessly blend multiple plates, CGI elements, and complex masks to create a singular, photorealistic masterpiece.
+       </p>
+      </div>
+      <div class="w-full md:w-1/2" data-aos="fade-right">
+       <div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-2xl">
+        <img alt="Creative Composite" class="w-full h-full object-cover" src="../assets/images/fashion_composites.png"/>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+     <div class="col-span-1 md:col-span-2">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center mb-6 group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+      <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
+       Premium photo retouching and asset management platform for the world's most demanding fashion photographers.
+      </p>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Platform
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="services.html">
+         Services
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="pricing.html">
+         Pricing
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="dashboard.html">
+         Client Portal
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="blog.html">
+         Journal
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Company
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="about.html">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 text-xs text-gray-400">
+     <p>
+      © 2026 RAW. All rights reserved.
+     </p>
+     <div class="flex space-x-6 mt-4 md:mt-0">
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-instagram-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-twitter-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-behance-logo text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+ 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+ </body>
+</html>

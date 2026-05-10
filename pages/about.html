@@ -1,152 +1,506 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - RetouchStudio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
-</head>
-<body class="antialiased transition-colors duration-300">
-    
-    <!-- Navbar (Simplified for mockup) -->
-    <header class="fixed w-full top-0 z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-serif text-2xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html">Home</a>
-                <a href="home2.html">Home 2</a>
-                <a href="about.html" class="font-bold">About</a>
-            </nav>
-            <div class="hidden md:flex"><a href="dashboard.html" class="bg-black text-white px-5 py-2 rounded-full">Client Portal</a></div>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   About Us - RAW
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#111111', 950: '#0a0a0a' }, gold: { 400: '#d4af37', 500: '#bf953f' } } } } }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/@phosphor-icons/web">
+  </script>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
+  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+ </head>
+ <body class="antialiased bg-white text-black dark:bg-black dark:text-white transition-colors duration-300">
+  <!-- Header / Navbar -->
+  <header class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+     <!-- Logo -->
+     <div class="flex-shrink-0 flex items-center">
+      <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+       <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+      </a>
+     </div>
+     <!-- Desktop Menu -->
+     <nav class="hidden lg:flex space-x-8 items-center">
+      <div class="relative group h-full inline-flex items-center">
+       <a class="text-sm nav-link" href="index.html">
+        Home
+        <i class="ph ph-caret-down ml-1 text-xs">
+        </i>
+       </a>
+       <div class="absolute top-full left-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <a class="flex items-center px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors border-b border-gray-50 dark:border-gray-800 text-black dark:text-gray-300" href="index.html">
+         Home 1
+        </a>
+        <a class="block px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors text-black dark:text-gray-300" href="home2.html">
+         Home 2
+        </a>
+       </div>
+      </div>
+      <a class="text-sm nav-link active" href="about.html">
+       About
+      </a>
+      <a class="text-sm nav-link" href="services.html">
+       Services
+      </a>
+      <a class="text-sm nav-link" href="niche.html">
+       Fashion
+      </a>
+      <a class="text-sm nav-link" href="portfolio.html">
+       Portfolio
+      </a>
+      <a class="text-sm nav-link" href="contact.html">
+       Contact
+      </a>
+     </nav>
+     <!-- Actions -->
+     <div class="hidden lg:flex items-center space-x-4">
+      <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+       RTL
+      </button>
+      <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ml-2" href="login.html">
+       Login
+      </a>
+      <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
+       Client Portal
+      </a>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="lg:hidden flex items-center space-x-4">
+              <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+         RTL
+        </button>
+       <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="p-2" id="mobile-menu-btn">
+       <i class="ph ph-list text-2xl">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Menu -->
+   <div class="hidden lg:hidden glass border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+     <div class="space-y-1">
+      <span class="block px-3 py-2 rounded-md text-sm uppercase tracking-[0.2em] font-bold text-black dark:text-white">
+       Home
+      </span>
+      <div class="pl-6 space-y-1">
+       <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 1
+     </a>
+       <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 2
+     </a>
+      </div>
+     </div>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="about.html">
+      <i class="ph ph-list mr-2"></i>
+      About
+     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
+      <i class="ph ph-list mr-2"></i>
+      Services
+     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
+      <i class="ph ph-list mr-2"></i>
+      Fashion
+     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
+      <i class="ph ph-list mr-2"></i>
+      Portfolio
+     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+      <i class="ph ph-list mr-2"></i>
+      Contact
+     </a>
+      <div class="border-t border-gray-200 dark:border-gray-700 pt-4 pb-2 space-y-3">
+       <a class="block w-full text-center bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-xl text-sm font-bold" href="login.html">
+        Login
+       </a>
+       <a class="block w-full text-center border border-gray-200 dark:border-gray-700 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold" href="dashboard.html">
+        Client Portal
+       </a>
+      </div>
+     </div>
+   </div>
+  </header>
+  <main class="pt-20">
+   <!-- SECTION 1: Brand story -->
+   <section class="py-24 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div data-aos="fade-right">
+       <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6">
+        Our Story
+       </h1>
+       <p class="text-gray-500 dark:text-gray-400 mb-6 text-lg">
+        Founded in 2018 in Milan, RAW began as an exclusive boutique serving a handful of premier fashion photographers. Today, we are a globally recognized post-production house.
+       </p>
+       <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg">
+        We believe that a retoucher is the silent partner to the photographer. Our job isn't to change the narrative, but to eliminate distractions and let the true essence of the subject shine through.
+       </p>
+       <img alt="Signature" class="h-12 dark:invert opacity-60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Signature_of_John_Hancock.svg/1200px-Signature_of_John_Hancock.svg.png"/>
+      </div>
+      <div class="relative" data-aos="fade-left">
+       <img alt="Studio" class="rounded-2xl shadow-2xl" src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&amp;fit=crop&amp;q=80&amp;w=1000"/>
+       <div class="absolute -bottom-8 -left-8 bg-black text-white p-8 rounded-xl hidden md:block">
+        <p class="text-4xl font-serif font-bold mb-1">
+         15+
+        </p>
+        <p class="text-xs uppercase tracking-widest text-gray-400">
+         Years Experience
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+    <!-- SECTION 2: Mission and creative philosophy -->
+    <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
+     <div class="max-w-4xl mx-auto px-4 text-center">
+      <i class="ph ph-diamond text-4xl text-black dark:text-white mb-6" data-aos="fade-up">
+      </i>
+      <h2 class="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8" data-aos="fade-up" data-aos-delay="100">
+       "We strive for the invisible edit. The best retouching is the kind you never notice."
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-left">
+       <div data-aos="fade-up" data-aos-delay="200">
+        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">
+         Authenticity
+        </h4>
+        <p class="text-sm text-gray-500">
+         Preserving the integrity of the original photograph while enhancing its core strengths.
+        </p>
+       </div>
+       <div data-aos="fade-up" data-aos-delay="300">
+        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">
+         Precision
+        </h4>
+        <p class="text-sm text-gray-500">
+         Meticulous pixel-level attention to detail, ensuring flawless rendering on any medium.
+        </p>
+       </div>
+       <div data-aos="fade-up" data-aos-delay="400">
+        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">
+         Discretion
+        </h4>
+        <p class="text-sm text-gray-500">
+         Absolute confidentiality for unreleased campaigns and high-profile editorial subjects.
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
+
+    <!-- SECTION 2.5: Detailed Process -->
+    <section class="py-32 bg-white dark:bg-black overflow-hidden">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center gap-20">
+       <div class="w-full md:w-1/2 order-2 md:order-1" data-aos="fade-right">
+        <div class="relative">
+         <img alt="The Process" class="rounded-2xl shadow-2xl relative z-10" src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&amp;fit=crop&amp;q=80&amp;w=800"/>
+         <div class="absolute -top-10 -right-10 w-64 h-64 bg-luxury-50 dark:bg-luxury-900 rounded-full -z-0"></div>
         </div>
-    </header>
+       </div>
+       <div class="w-full md:w-1/2 order-1 md:order-2" data-aos="fade-left">
+        <h2 class="font-serif text-4xl md:text-5xl font-bold mb-8 text-black dark:text-white">
+         The RAW Standard
+        </h2>
+        <div class="space-y-12">
+         <div class="flex items-start">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full border border-black dark:border-white flex items-center justify-center font-bold mr-6">01</span>
+          <div>
+           <h4 class="font-bold uppercase tracking-widest text-xs mb-2">Analysis & Intent</h4>
+           <p class="text-gray-500 dark:text-gray-400 text-sm">We begin by studying the lighting, mood, and intended publication medium of your RAW files.</p>
+          </div>
+         </div>
+         <div class="flex items-start">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full border border-black dark:border-white flex items-center justify-center font-bold mr-6">02</span>
+          <div>
+           <h4 class="font-bold uppercase tracking-widest text-xs mb-2">Micro-Retouching</h4>
+           <p class="text-gray-500 dark:text-gray-400 text-sm">Our specialists work at 200% zoom, using non-destructive dodge and burn to perfect texture without blurring pores.</p>
+          </div>
+         </div>
+         <div class="flex items-start">
+          <span class="flex-shrink-0 w-10 h-10 rounded-full border border-black dark:border-white flex items-center justify-center font-bold mr-6">03</span>
+          <div>
+           <h4 class="font-bold uppercase tracking-widest text-xs mb-2">Color Engineering</h4>
+           <p class="text-gray-500 dark:text-gray-400 text-sm">Custom LUT development and luminosity masking to create the specific atmosphere requested by the creative director.</p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+   <!-- SECTION 3: Team members/retouch specialists -->
+   <section class="py-24 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <h2 class="font-serif text-4xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">
+      The Specialists
+     </h2>
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <!-- Member 1 -->
+      <div class="group text-center" data-aos="fade-up" data-aos-delay="100">
+       <div class="overflow-hidden rounded-full aspect-square mb-6">
+        <img alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;q=80&amp;w=400"/>
+       </div>
+       <h4 class="font-serif text-xl font-bold">
+        Julian Rossi
+       </h4>
+       <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">
+        Lead Retoucher
+       </p>
+      </div>
+      <!-- Member 2 -->
+      <div class="group text-center" data-aos="fade-up" data-aos-delay="200">
+       <div class="overflow-hidden rounded-full aspect-square mb-6">
+        <img alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;q=80&amp;w=400"/>
+       </div>
+       <h4 class="font-serif text-xl font-bold">
+        Clara Dupont
+       </h4>
+       <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">
+        Colorist
+       </p>
+      </div>
+      <!-- Member 3 -->
+      <div class="group text-center" data-aos="fade-up" data-aos-delay="300">
+       <div class="overflow-hidden rounded-full aspect-square mb-6">
+        <img alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;q=80&amp;w=400"/>
+       </div>
+       <h4 class="font-serif text-xl font-bold">
+        Marc Evans
+       </h4>
+       <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">
+        Composite Artist
+       </p>
+      </div>
+      <!-- Member 4 -->
+      <div class="group text-center" data-aos="fade-up" data-aos-delay="400">
+       <div class="overflow-hidden rounded-full aspect-square mb-6">
+        <img alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;q=80&amp;w=400"/>
+       </div>
+       <h4 class="font-serif text-xl font-bold">
+        Lina Chen
+       </h4>
+       <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">
+        Studio Manager
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+    <!-- SECTION 4: Testimonials and achievements -->
+    <section class="py-24 bg-black text-white">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+       <div data-aos="fade-right">
+        <h2 class="font-serif text-4xl font-bold mb-8">
+         Achievements
+        </h2>
+        <div class="space-y-6">
+         <div class="border-b border-gray-800 pb-4">
+          <p class="text-gray-400 text-sm">
+           2025
+          </p>
+          <h4 class="text-xl">
+           Awwwards - Site of the Day
+          </h4>
+         </div>
+         <div class="border-b border-gray-800 pb-4">
+          <p class="text-gray-400 text-sm">
+           2024
+          </p>
+          <h4 class="text-xl">
+           International Photography Awards - Retouching
+          </h4>
+         </div>
+         <div class="border-b border-gray-800 pb-4">
+          <p class="text-gray-400 text-sm">
+           2022
+          </p>
+          <h4 class="text-xl">
+           Vogue Feature - Post-Production Mastery
+          </h4>
+         </div>
+        </div>
+       </div>
+       <div class="bg-luxury-900 p-10 rounded-2xl flex flex-col justify-center" data-aos="fade-left">
+        <i class="ph-fill ph-quotes text-3xl text-gray-600 mb-6">
+        </i>
+        <p class="font-serif text-2xl mb-8">
+         "RAW understands the fragile balance between polishing an image and destroying its soul. They are the only studio I trust with my RAW files."
+        </p>
+        <p class="font-bold uppercase tracking-widest text-sm">
+         — David Bailey
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
 
-    <main class="pt-20">
-        <!-- SECTION 1: Brand story -->
-        <section class="py-24 bg-white dark:bg-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                    <div data-aos="fade-right">
-                        <h1 class="font-serif text-5xl md:text-6xl font-bold mb-6">Our Story</h1>
-                        <p class="text-gray-500 dark:text-gray-400 mb-6 text-lg">Founded in 2018 in Milan, RetouchStudio began as an exclusive boutique serving a handful of premier fashion photographers. Today, we are a globally recognized post-production house.</p>
-                        <p class="text-gray-500 dark:text-gray-400 mb-8 text-lg">We believe that a retoucher is the silent partner to the photographer. Our job isn't to change the narrative, but to eliminate distractions and let the true essence of the subject shine through.</p>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Signature_of_John_Hancock.svg/1200px-Signature_of_John_Hancock.svg.png" alt="Signature" class="h-12 dark:invert opacity-60">
-                    </div>
-                    <div class="relative" data-aos="fade-left">
-                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&q=80&w=1000" alt="Studio" class="rounded-2xl shadow-2xl">
-                        <div class="absolute -bottom-8 -left-8 bg-black text-white p-8 rounded-xl hidden md:block">
-                            <p class="text-4xl font-serif font-bold mb-1">15+</p>
-                            <p class="text-xs uppercase tracking-widest text-gray-400">Years Experience</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 2: Mission and creative philosophy -->
-        <section class="py-24 bg-luxury-50 dark:bg-luxury-900">
-            <div class="max-w-4xl mx-auto px-4 text-center">
-                <i class="ph ph-diamond text-4xl text-black dark:text-white mb-6" data-aos="fade-up"></i>
-                <h2 class="font-serif text-3xl md:text-5xl font-bold leading-tight mb-8" data-aos="fade-up" data-aos-delay="100">"We strive for the invisible edit. The best retouching is the kind you never notice."</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 text-left">
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">Authenticity</h4>
-                        <p class="text-sm text-gray-500">Preserving the integrity of the original photograph while enhancing its core strengths.</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">Precision</h4>
-                        <p class="text-sm text-gray-500">Meticulous pixel-level attention to detail, ensuring flawless rendering on any medium.</p>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="400">
-                        <h4 class="font-bold uppercase tracking-widest text-sm mb-3">Discretion</h4>
-                        <p class="text-sm text-gray-500">Absolute confidentiality for unreleased campaigns and high-profile editorial subjects.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: Team members/retouch specialists -->
-        <section class="py-24 bg-white dark:bg-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold mb-16 text-center" data-aos="fade-up">The Specialists</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                    <!-- Member 1 -->
-                    <div class="group text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="overflow-hidden rounded-full aspect-square mb-6">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h4 class="font-serif text-xl font-bold">Julian Rossi</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Lead Retoucher</p>
-                    </div>
-                    <!-- Member 2 -->
-                    <div class="group text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="overflow-hidden rounded-full aspect-square mb-6">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h4 class="font-serif text-xl font-bold">Clara Dupont</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Colorist</p>
-                    </div>
-                    <!-- Member 3 -->
-                    <div class="group text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="overflow-hidden rounded-full aspect-square mb-6">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h4 class="font-serif text-xl font-bold">Marc Evans</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Composite Artist</p>
-                    </div>
-                    <!-- Member 4 -->
-                    <div class="group text-center" data-aos="fade-up" data-aos-delay="400">
-                        <div class="overflow-hidden rounded-full aspect-square mb-6">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="Team" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
-                        </div>
-                        <h4 class="font-serif text-xl font-bold">Lina Chen</h4>
-                        <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Studio Manager</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: Testimonials and achievements -->
-        <section class="py-24 bg-black text-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                    <div data-aos="fade-right">
-                        <h2 class="font-serif text-4xl font-bold mb-8">Achievements</h2>
-                        <div class="space-y-6">
-                            <div class="border-b border-gray-800 pb-4">
-                                <p class="text-gray-400 text-sm">2025</p>
-                                <h4 class="text-xl">Awwwards - Site of the Day</h4>
-                            </div>
-                            <div class="border-b border-gray-800 pb-4">
-                                <p class="text-gray-400 text-sm">2024</p>
-                                <h4 class="text-xl">International Photography Awards - Retouching</h4>
-                            </div>
-                            <div class="border-b border-gray-800 pb-4">
-                                <p class="text-gray-400 text-sm">2022</p>
-                                <h4 class="text-xl">Vogue Feature - Post-Production Mastery</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-left" class="bg-luxury-900 p-10 rounded-2xl flex flex-col justify-center">
-                        <i class="ph-fill ph-quotes text-3xl text-gray-600 mb-6"></i>
-                        <p class="font-serif text-2xl mb-8">"RetouchStudio understands the fragile balance between polishing an image and destroying its soul. They are the only studio I trust with my RAW files."</p>
-                        <p class="font-bold uppercase tracking-widest text-sm">— David Bailey</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-white dark:bg-black py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
-        <p>&copy; 2026 RetouchStudio.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../assets/js/main.js"></script>
-</body>
+    <!-- SECTION 5: Global Presence -->
+    <section class="py-32 bg-white dark:bg-black text-black dark:text-white border-t border-gray-100 dark:border-gray-800">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-20">
+       <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6 text-black dark:text-white">Global Influence</h2>
+       <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">From the fashion capitals to the most remote editorial locations, our impact is felt worldwide.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+       <div data-aos="zoom-in">
+        <p class="text-4xl text-black dark:text-white font-serif font-bold mb-2">Milan</p>
+        <p class="text-xs uppercase tracking-widest text-gold-500 font-bold">Headquarters</p>
+       </div>
+       <div data-aos="zoom-in" data-aos-delay="100">
+        <p class="text-4xl text-black dark:text-white font-serif font-bold mb-2">London</p>
+        <p class="text-xs uppercase tracking-widest text-gray-500">Creative Hub</p>
+       </div>
+       <div data-aos="zoom-in" data-aos-delay="200">
+        <p class="text-4xl text-black dark:text-white font-serif font-bold mb-2">NYC</p>
+        <p class="text-xs uppercase tracking-widest text-gray-500">Campaign Studio</p>
+       </div>
+       <div data-aos="zoom-in" data-aos-delay="300">
+        <p class="text-4xl text-black dark:text-white font-serif font-bold mb-2">Tokyo</p>
+        <p class="text-xs uppercase tracking-widest text-gray-500">Post-Production</p>
+       </div>
+      </div>
+      
+      <div class="mt-24 pt-16 border-t border-gray-100 dark:border-gray-800 grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+       <div>
+        <p class="text-5xl text-black dark:text-white font-bold mb-2">500+</p>
+        <p class="text-sm text-gray-500 uppercase tracking-[0.2em]">Magazines Covered</p>
+       </div>
+       <div>
+        <p class="text-5xl text-black dark:text-white font-bold mb-2">120k</p>
+        <p class="text-sm text-gray-500 uppercase tracking-[0.2em]">Assets Perfected</p>
+       </div>
+       <div>
+        <p class="text-5xl text-black dark:text-white font-bold mb-2">48</p>
+        <p class="text-sm text-gray-500 uppercase tracking-[0.2em]">Countries Reached</p>
+       </div>
+      </div>
+     </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+     <div class="col-span-1 md:col-span-2">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center mb-6 group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+      <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
+       Premium photo retouching and asset management platform for the world's most demanding fashion photographers.
+      </p>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Platform
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="services.html">
+         Services
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="pricing.html">
+         Pricing
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="dashboard.html">
+         Client Portal
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="blog.html">
+         Journal
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Company
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="about.html">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 text-xs text-gray-400">
+     <p>
+      © 2026 RAW. All rights reserved.
+     </p>
+     <div class="flex space-x-6 mt-4 md:mt-0">
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-instagram-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-twitter-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-behance-logo text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+ 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+ </body>
 </html>

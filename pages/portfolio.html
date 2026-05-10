@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Portfolio - RAW
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = { 
+            darkMode: 'class', 
+            theme: { 
+                extend: { 
+                    colors: { 
+                        luxury: { 50: '#f7f7f8', 900: '#111111', 950: '#0a0a0a' },
+                        gold: { 400: '#d4af37', 500: '#bf953f' }
+                    } 
+                } 
+            } 
+        }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/@phosphor-icons/web">
+  </script>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
+  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+  <style>
+   .glass-dark {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fdbf59, #bf953f);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 200% auto;
+            animation: shine 5s linear infinite;
+        }
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+        
+        /* Masonry Layout */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { column-count: 3; }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+  </style>
+ </head>
+ <body class="antialiased bg-luxury-950 text-white transition-colors duration-300 dark">
+  <!-- Header / Navbar -->
+  <header class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+     <!-- Logo -->
+     <div class="flex-shrink-0 flex items-center">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+     </div>
+     <!-- Desktop Menu -->
+     <nav class="hidden lg:flex space-x-8 items-center">
+       <div class="relative group h-full inline-flex items-center">
+        <a class="text-sm nav-link" href="index.html">
+         Home
+         <i class="ph ph-caret-down ml-1 text-xs">
+         </i>
+        </a>
+       <div class="absolute top-full left-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <a class="flex items-center px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors border-b border-gray-50 dark:border-gray-800 text-black dark:text-gray-300" href="index.html">
+         Home 1
+        </a>
+        <a class="block px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors text-black dark:text-gray-300" href="home2.html">
+         Home 2
+        </a>
+       </div>
+      </div>
+       <a class="text-sm nav-link" href="about.html">
+        About
+       </a>
+       <a class="text-sm nav-link" href="services.html">
+        Services
+       </a>
+       <a class="text-sm nav-link" href="niche.html">
+        Fashion
+       </a>
+       <a class="text-sm nav-link active" href="portfolio.html">
+        Portfolio
+       </a>
+       <a class="text-sm nav-link" href="contact.html">
+        Contact
+       </a>
+     </nav>
+     <!-- Actions -->
+     <div class="hidden lg:flex items-center space-x-4">
+      <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+       RTL
+      </button>
+      <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ml-2" href="login.html">
+       Login
+      </a>
+      <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
+       Client Portal
+      </a>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="lg:hidden flex items-center space-x-4">
+              <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+         RTL
+        </button>
+       <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="p-2" id="mobile-menu-btn">
+       <i class="ph ph-list text-2xl">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Menu -->
+   <div class="hidden lg:hidden glass border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+     <div class="space-y-1">
+      <span class="block px-3 py-2 rounded-md text-sm uppercase tracking-[0.2em] font-bold text-black dark:text-white">
+       Home
+      </span>
+      <div class="pl-6 space-y-1">
+       <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 1
+     </a>
+       <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 2
+     </a>
+      </div>
+     </div>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
+      <i class="ph ph-list mr-2"></i>
+      About
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
+      <i class="ph ph-list mr-2"></i>
+      Services
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
+      <i class="ph ph-list mr-2"></i>
+      Fashion
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="portfolio.html">
+      <i class="ph ph-list mr-2"></i>
+      Portfolio
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+      <i class="ph ph-list mr-2"></i>
+      Contact
+     </a>
+      <div class="border-t border-gray-200 dark:border-gray-700 pt-4 pb-2 space-y-3">
+       <a class="block w-full text-center bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-xl text-sm font-bold" href="login.html">
+        Login
+       </a>
+       <a class="block w-full text-center border border-gray-200 dark:border-gray-700 text-black dark:text-white px-6 py-3 rounded-xl text-sm font-bold" href="dashboard.html">
+        Client Portal
+       </a>
+      </div>
+     </div>
+   </div>
+  </header>
+  <main>
+   <!-- Hero Section -->
+   <section class="relative pt-40 pb-20 flex flex-col items-center justify-center text-center overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-500/20 via-luxury-950 to-luxury-950">
+    </div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4">
+     <p class="text-gold-400 uppercase tracking-[0.6em] text-xs font-bold mb-6" data-aos="fade-down">
+      The Archive
+     </p>
+     <h1 class="font-serif text-5xl md:text-7xl font-bold mb-8 text-white" data-aos="fade-up" data-aos-delay="100">
+      Curated Excellence
+     </h1>
+     <p class="text-gray-400 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+      A selection of our finest post-production and digital artistry across global fashion campaigns and editorial publications.
+     </p>
+    </div>
+   </section>
+   <!-- Masonry Portfolio Grid -->
+   <section class="pb-32 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
+    <div class="masonry-grid">
+     <!-- Item 1: High Fashion Editorial -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Editorial Campaign" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/portfolio_editorial_1.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Vogue Italia
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Nocturnal Elegance
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 2: Beauty Retouching -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Beauty Macro" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/portfolio_beauty_1.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Fenty Beauty
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Luminous Skin
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 3: Avant-Garde -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Avant Garde" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/portfolio_avant_1.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Harper's Bazaar
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Structured Shadows
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 4: Cinematic Street -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Street Style" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/portfolio_street_1.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Saint Laurent
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Parisian Twilight
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 5: High-End Fashion Compositing -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Composites" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Personal Project
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Atmospheric Plates
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 6: Campaign Grading -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Campaign Grading" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/portfolio_campaigns_1.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Bottega Veneta
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Desert Sun Campaign
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 7: Beauty -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Beauty" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/fashion_beauty.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Beauty
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Flawless Skin
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 8: Campaign -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Campaign" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/fashion_campaigns.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Campaign
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Summer Collection
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 9: Editorial -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Editorial" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/fashion_editorial.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Editorial
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Neon Lights
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 10: Composite -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Composite" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Composite
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Surreal Dream
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 11: High Fashion -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="High Fashion" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/luxury_fashion_hero_v2.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         High Fashion
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Golden Hour
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 12: Luxury -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Luxury" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/rich_fashion_hero.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Luxury
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Velvet Shadows
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 13: Portrait -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Portrait" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/fashion_hero_v3.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Portrait
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Sharp Focus
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 14: Avant-Garde -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Avant-Garde" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/fashion_hero_background.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Avant-Garde
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Moody Atmosphere
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 15: Retouching -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Retouching" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="../assets/images/fashion_before_after.png"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Retouching
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Perfect Detail
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 16: Street Style -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Street Style" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Street Style
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Urban Chic
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 17: Editorial -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="100">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Editorial" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Editorial
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Vogue Essence
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 18: Haute Couture -->
+     <div class="masonry-item group" data-aos="fade-up" data-aos-delay="200">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Haute Couture" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Haute Couture
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Classic Elegance
+        </h3>
+       </div>
+      </div>
+     </div>
+     <!-- Item 19: Editorial Movement -->
+     <div class="masonry-item group" data-aos="fade-up">
+      <div class="relative overflow-hidden rounded-xl shadow-2xl cursor-pointer">
+       <img alt="Editorial Movement" class="w-full h-auto transform group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://images.unsplash.com/photo-1542451313056-b7c8e626645f?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+       <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+        <p class="text-gold-400 text-xs uppercase tracking-[0.3em] font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+         Editorial
+        </p>
+        <h3 class="font-serif text-3xl text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+         Fluidity
+        </h3>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- CTA Section -->
+   <section class="py-32 bg-black border-t border-white/5 relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/5 rounded-full blur-[100px] pointer-events-none">
+    </div>
+    <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+     <h2 class="font-serif text-5xl font-bold mb-8 text-white" data-aos="fade-up">
+      Ready to elevate your imagery?
+     </h2>
+     <div data-aos="zoom-in" data-aos-delay="100">
+      <a class="inline-block px-10 py-4 bg-white text-black font-bold uppercase tracking-[0.2em] text-sm hover:bg-gold-400 transition-colors duration-300" href="contact.html">
+       Start a Project
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+     <div class="col-span-1 md:col-span-2">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center mb-6 group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+      <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
+       Premium photo retouching and asset management platform for the world's most demanding fashion photographers.
+      </p>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Platform
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="services.html">
+         Services
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="pricing.html">
+         Pricing
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="dashboard.html">
+         Client Portal
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="blog.html">
+         Journal
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Company
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="about.html">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 text-xs text-gray-400">
+     <p>
+      © 2026 RAW. All rights reserved.
+     </p>
+     <div class="flex space-x-6 mt-4 md:mt-0">
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-instagram-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-twitter-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-behance-logo text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ once: true, offset: 50, duration: 800 });
+            }
+        });
+  </script>
+ 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+ </body>
+</html>

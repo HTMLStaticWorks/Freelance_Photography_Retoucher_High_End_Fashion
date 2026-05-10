@@ -1,125 +1,379 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Journal - RetouchStudio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }</script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
-</head>
-<body class="antialiased transition-colors duration-300">
-
-    <header class="fixed w-full top-0 z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-serif text-2xl font-bold">RETOUCH<span class="font-sans font-light">STUDIO</span></a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html">Home</a>
-                <a href="home2.html">Home 2</a>
-                <a href="blog.html" class="font-bold">Journal</a>
-            </nav>
-            <div class="hidden md:flex"><a href="dashboard.html" class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full">Client Portal</a></div>
-        </div>
-    </header>
-
-    <main class="pt-32">
-        <!-- SECTION 1: Blog hero with search/filter -->
-        <section class="py-12 bg-white dark:bg-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">The Retoucher's Journal</h1>
-                <p class="text-gray-500 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">Insights, tutorials, and behind-the-scenes looks into high-end fashion post-production.</p>
-                
-                <div class="max-w-xl mx-auto flex items-center border-b border-gray-300 dark:border-gray-700 pb-2" data-aos="fade-up" data-aos-delay="200">
-                    <i class="ph ph-magnifying-glass text-xl text-gray-400 mr-2"></i>
-                    <input type="text" placeholder="Search articles..." class="w-full bg-transparent border-none outline-none text-sm placeholder-gray-400">
-                </div>
-                
-                <div class="flex justify-center space-x-4 mt-8 overflow-x-auto pb-4" data-aos="fade-up" data-aos-delay="300">
-                    <button class="px-4 py-1 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-bold uppercase tracking-wider">All</button>
-                    <button class="px-4 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-800">Technique</button>
-                    <button class="px-4 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-800">Industry</button>
-                    <button class="px-4 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-800">Case Studies</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 2: Featured article showcase -->
-        <section class="py-12 bg-luxury-50 dark:bg-luxury-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="group relative overflow-hidden rounded-2xl md:flex bg-white dark:bg-black shadow-xl" data-aos="fade-up">
-                    <div class="md:w-3/5 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1542451313056-b7c8e626645f?auto=format&fit=crop&q=80&w=1200" alt="Featured" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000">
-                    </div>
-                    <div class="md:w-2/5 p-10 flex flex-col justify-center">
-                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Featured Case Study</p>
-                        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">Color Grading for Autumn Editorials</h2>
-                        <p class="text-gray-500 text-sm mb-8 leading-relaxed">Discover how we achieved the deep, moody cinematic tones for the latest Vogue Paris cover shoot, ensuring consistent color narratives across diverse lighting scenarios.</p>
-                        <a href="blog-details.html" class="inline-flex items-center text-sm font-bold uppercase tracking-widest border-b border-black dark:border-white w-max pb-1 hover:text-gray-500 transition-colors">Read Full Article <i class="ph ph-arrow-right ml-2"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: Filterable articles grid -->
-        <section class="py-24 bg-white dark:bg-black">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <!-- Article 1 -->
-                    <a href="blog-details.html" class="group block" data-aos="fade-up">
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&q=80&w=600" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="text-xs text-gray-400 mb-2 font-bold uppercase tracking-wider">Technique • Oct 12</p>
-                        <h3 class="font-serif text-2xl font-bold mb-3 group-hover:text-gray-500 transition-colors">Mastering Frequency Separation</h3>
-                        <p class="text-sm text-gray-500 line-clamp-2">A deep dive into setting up your actions for flawless skin texture retention without the plastic look.</p>
-                    </a>
-                    <!-- Article 2 -->
-                    <a href="blog-details.html" class="group block" data-aos="fade-up" data-aos-delay="100">
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                            <img src="https://images.unsplash.com/photo-1550592704-6c76defa99ce?auto=format&fit=crop&q=80&w=600" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="text-xs text-gray-400 mb-2 font-bold uppercase tracking-wider">Industry • Sep 28</p>
-                        <h3 class="font-serif text-2xl font-bold mb-3 group-hover:text-gray-500 transition-colors">The Future of AI in Retouching</h3>
-                        <p class="text-sm text-gray-500 line-clamp-2">How machine learning is speeding up masking workflows without replacing the artist's eye.</p>
-                    </a>
-                    <!-- Article 3 -->
-                    <a href="blog-details.html" class="group block" data-aos="fade-up" data-aos-delay="200">
-                        <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
-                            <img src="https://images.unsplash.com/photo-1524041255072-7da0525d6b34?auto=format&fit=crop&q=80&w=600" alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        </div>
-                        <p class="text-xs text-gray-400 mb-2 font-bold uppercase tracking-wider">Case Studies • Sep 10</p>
-                        <h3 class="font-serif text-2xl font-bold mb-3 group-hover:text-gray-500 transition-colors">E-Commerce Batch Automation</h3>
-                        <p class="text-sm text-gray-500 line-clamp-2">Our workflow for processing 500+ lookbook images in under 48 hours.</p>
-                    </a>
-                </div>
-                
-                <div class="mt-16 text-center">
-                    <button class="px-8 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-sm font-bold uppercase tracking-wider hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">Load More Articles</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: Newsletter subscription section -->
-        <section class="py-24 bg-black text-white text-center">
-            <div class="max-w-2xl mx-auto px-4">
-                <h2 class="font-serif text-4xl font-bold mb-4" data-aos="fade-up">Subscribe to the Journal</h2>
-                <p class="text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">Get the latest retouching tutorials and industry news delivered to your inbox monthly.</p>
-                <form class="flex max-w-md mx-auto border-b border-gray-600 pb-2" data-aos="fade-up" data-aos-delay="200">
-                    <input type="email" placeholder="Your Email Address" class="bg-transparent border-none outline-none w-full text-sm placeholder-gray-500">
-                    <button type="submit" class="font-bold uppercase tracking-wider text-sm hover:text-gray-300">Subscribe</button>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-white dark:bg-black py-10 text-center text-sm text-gray-500 border-t border-gray-200 dark:border-gray-800">
-        <p>&copy; 2026 RetouchStudio.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="../assets/js/main.js"></script>
-</body>
+<html dir="ltr" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Journal - RAW
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <script>
+   tailwind.config = { darkMode: 'class', theme: { extend: { colors: { luxury: { 50: '#f7f7f8', 900: '#1a1a1a', } } } } }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/@phosphor-icons/web">
+  </script>
+  <link href="../assets/css/style.css" rel="stylesheet"/>
+  <link href="../assets/css/dark-mode.css" rel="stylesheet"/>
+  <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+ </head>
+ <body class="antialiased transition-colors duration-300">
+  <!-- Header / Navbar -->
+  <header class="fixed w-full top-0 z-50 glass transition-all duration-300" id="navbar">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+     <!-- Logo -->
+     <div class="flex-shrink-0 flex items-center">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+     </div>
+     <!-- Desktop Menu -->
+     <nav class="hidden lg:flex space-x-8 items-center">
+      <div class="relative group h-full inline-flex items-center">
+       <a class="text-sm nav-link" href="index.html">
+        Home
+        <i class="ph ph-caret-down ml-1 text-xs">
+        </i>
+       </a>
+       <div class="absolute top-full left-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <a class="flex items-center px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors border-b border-gray-50 dark:border-gray-800 text-black dark:text-gray-300" href="index.html">
+         Home 1
+        </a>
+        <a class="block px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors text-black dark:text-gray-300" href="home2.html">
+         Home 2
+        </a>
+       </div>
+      </div>
+      <a class="text-sm nav-link" href="about.html">
+       About
+      </a>
+      <a class="text-sm nav-link" href="services.html">
+       Services
+      </a>
+      <a class="text-sm nav-link" href="niche.html">
+       Fashion
+      </a>
+      <a class="text-sm nav-link" href="portfolio.html">
+       Portfolio
+      </a>
+      <a class="text-sm nav-link" href="contact.html">
+       Contact
+      </a>
+     </nav>
+     <!-- Actions -->
+     <div class="hidden lg:flex items-center space-x-4">
+      <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+       RTL
+      </button>
+      <a class="border border-gray-300 dark:border-white/30 px-5 py-2 rounded-full text-sm font-medium text-gray-800 dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all transform hover:scale-105" href="login.html">Login</a>
+      <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
+       Client Portal
+      </a>
+     </div>
+     <!-- Mobile Menu Button -->
+     <div class="lg:hidden flex items-center space-x-4">
+              <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
+         RTL
+        </button>
+       <button class="theme-toggle p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:rotate-12 active:scale-90">
+       <i class="ph ph-moon text-xl dark:hidden">
+       </i>
+       <i class="ph ph-sun text-xl hidden dark:block">
+       </i>
+      </button>
+      <button class="p-2" id="mobile-menu-btn">
+       <i class="ph ph-list text-2xl">
+       </i>
+      </button>
+     </div>
+    </div>
+   </div>
+   <!-- Mobile Menu -->
+   <div class="hidden lg:hidden glass border-t border-gray-200 dark:border-gray-800" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+     <div class="space-y-1">
+      <span class="block px-3 py-2 rounded-md text-sm uppercase tracking-[0.2em] font-bold text-black dark:text-white">
+       Home
+      </span>
+      <div class="pl-6 space-y-1">
+       <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 1
+     </a>
+       <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
+      <i class="ph ph-list mr-2"></i>
+      Home 2
+     </a>
+      </div>
+     </div>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
+      <i class="ph ph-list mr-2"></i>
+      About
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="services.html">
+      <i class="ph ph-list mr-2"></i>
+      Services
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
+      <i class="ph ph-list mr-2"></i>
+      Fashion
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
+      <i class="ph ph-list mr-2"></i>
+      Portfolio
+     </a>
+     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+      <i class="ph ph-list mr-2"></i>
+      Contact
+     </a>
+     <div class="border-t border-gray-200 dark:border-gray-700 pt-2 pb-2">
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="login.html">
+      <i class="ph ph-list mr-2"></i>
+      Login
+     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="dashboard.html">
+      <i class="ph ph-list mr-2"></i>
+      Client Portal
+     </a>
+     </div>
+    </div>
+   </div>
+  </header>
+  <main class="pt-32">
+   <!-- SECTION 1: Blog hero with search/filter -->
+   <section class="py-12 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+     <h1 class="font-serif text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+      The Retoucher's Journal
+     </h1>
+     <p class="text-gray-500 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="100">
+      Insights, tutorials, and behind-the-scenes looks into high-end fashion post-production.
+     </p>
+     <div class="max-w-xl mx-auto flex items-center border-b border-gray-300 dark:border-gray-700 pb-2" data-aos="fade-up" data-aos-delay="200">
+      <i class="ph ph-magnifying-glass text-xl text-gray-400 mr-2">
+      </i>
+      <input class="w-full bg-transparent border-none outline-none text-sm placeholder-gray-400" placeholder="Search articles..." type="text"/>
+     </div>
+     <div class="flex justify-center space-x-4 mt-8 overflow-x-auto pb-4" data-aos="fade-up" data-aos-delay="300">
+      <button class="px-4 py-1 rounded-full bg-black text-white dark:bg-white dark:text-black text-xs font-bold uppercase tracking-wider">
+       All
+      </button>
+      <button class="px-4 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-800">
+       Technique
+      </button>
+      <button class="px-4 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-800">
+       Industry
+      </button>
+      <button class="px-4 py-1 rounded-full border border-gray-300 dark:border-gray-700 text-xs font-bold uppercase tracking-wider hover:bg-gray-100 dark:hover:bg-gray-800">
+       Case Studies
+      </button>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION 2: Featured article showcase -->
+   <section class="py-12 bg-luxury-50 dark:bg-luxury-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="group relative overflow-hidden rounded-2xl md:flex bg-white dark:bg-black shadow-xl" data-aos="fade-up">
+      <div class="md:w-3/5 overflow-hidden">
+       <img alt="Featured" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000" src="https://images.unsplash.com/photo-1542451313056-b7c8e626645f?auto=format&amp;fit=crop&amp;q=80&amp;w=1200"/>
+      </div>
+      <div class="md:w-2/5 p-10 flex flex-col justify-center">
+       <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
+        Featured Case Study
+       </p>
+       <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">
+        Color Grading for Autumn Editorials
+       </h2>
+       <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+        Discover how we achieved the deep, moody cinematic tones for the latest Vogue Paris cover shoot, ensuring consistent color narratives across diverse lighting scenarios.
+       </p>
+       <a class="inline-flex items-center text-sm font-bold uppercase tracking-widest border-b border-black dark:border-white w-max pb-1 hover:text-gray-500 transition-colors" href="blog-details.html">
+        Read Full Article
+        <i class="ph ph-arrow-right ml-2">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION 3: Filterable articles grid -->
+   <section class="py-24 bg-white dark:bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <!-- Article 1 -->
+      <a class="group block" data-aos="fade-up" href="blog-details.html">
+       <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
+        <img alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&amp;fit=crop&amp;q=80&amp;w=600"/>
+       </div>
+       <p class="text-xs text-gray-400 mb-2 font-bold uppercase tracking-wider">
+        Technique • Oct 12
+       </p>
+       <h3 class="font-serif text-2xl font-bold mb-3 group-hover:text-gray-500 transition-colors">
+        Mastering Frequency Separation
+       </h3>
+       <p class="text-sm text-gray-500 line-clamp-2">
+        A deep dive into setting up your actions for flawless skin texture retention without the plastic look.
+       </p>
+      </a>
+      <!-- Article 2 -->
+      <a class="group block" data-aos="fade-up" data-aos-delay="100" href="blog-details.html">
+       <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
+        <img alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1550592704-6c76defa99ce?auto=format&amp;fit=crop&amp;q=80&amp;w=600"/>
+       </div>
+       <p class="text-xs text-gray-400 mb-2 font-bold uppercase tracking-wider">
+        Industry • Sep 28
+       </p>
+       <h3 class="font-serif text-2xl font-bold mb-3 group-hover:text-gray-500 transition-colors">
+        The Future of AI in Retouching
+       </h3>
+       <p class="text-sm text-gray-500 line-clamp-2">
+        How machine learning is speeding up masking workflows without replacing the artist's eye.
+       </p>
+      </a>
+      <!-- Article 3 -->
+      <a class="group block" data-aos="fade-up" data-aos-delay="200" href="blog-details.html">
+       <div class="aspect-[4/3] rounded-xl overflow-hidden mb-6">
+        <img alt="Article" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1524041255072-7da0525d6b34?auto=format&amp;fit=crop&amp;q=80&amp;w=600"/>
+       </div>
+       <p class="text-xs text-gray-400 mb-2 font-bold uppercase tracking-wider">
+        Case Studies • Sep 10
+       </p>
+       <h3 class="font-serif text-2xl font-bold mb-3 group-hover:text-gray-500 transition-colors">
+        E-Commerce Batch Automation
+       </h3>
+       <p class="text-sm text-gray-500 line-clamp-2">
+        Our workflow for processing 500+ lookbook images in under 48 hours.
+       </p>
+      </a>
+     </div>
+     <div class="mt-16 text-center">
+      <button class="px-8 py-3 rounded-full border border-gray-300 dark:border-gray-700 text-sm font-bold uppercase tracking-wider hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+       Load More Articles
+      </button>
+     </div>
+    </div>
+   </section>
+   <!-- SECTION 4: Newsletter subscription section -->
+   <section class="py-24 bg-black text-white text-center">
+    <div class="max-w-2xl mx-auto px-4">
+     <h2 class="font-serif text-4xl font-bold mb-4" data-aos="fade-up">
+      Subscribe to the Journal
+     </h2>
+     <p class="text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="100">
+      Get the latest retouching tutorials and industry news delivered to your inbox monthly.
+     </p>
+     <form class="flex max-w-md mx-auto border-b border-gray-600 pb-2" data-aos="fade-up" data-aos-delay="200">
+      <input class="bg-transparent border-none outline-none w-full text-sm placeholder-gray-500" placeholder="Your Email Address" type="email"/>
+      <button class="font-bold uppercase tracking-wider text-sm hover:text-gray-300" type="submit">
+       Subscribe
+      </button>
+     </form>
+    </div>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-luxury-900 pt-20 pb-10 border-t border-gray-100 dark:border-gray-800">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+     <div class="col-span-1 md:col-span-2">
+       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center mb-6 group" href="index.html">
+        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
+       </a>
+      <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
+       Premium photo retouching and asset management platform for the world's most demanding fashion photographers.
+      </p>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Platform
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="services.html">
+         Services
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="pricing.html">
+         Pricing
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="dashboard.html">
+         Client Portal
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="blog.html">
+         Journal
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div>
+      <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
+       Company
+      </h5>
+      <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="about.html">
+         About Us
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="contact.html">
+         Contact
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Privacy Policy
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+         Terms of Service
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-100 dark:border-gray-800 text-xs text-gray-400">
+     <p>
+      © 2026 RAW. All rights reserved.
+     </p>
+     <div class="flex space-x-6 mt-4 md:mt-0">
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-instagram-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-twitter-logo text-xl">
+       </i>
+      </a>
+      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
+       <i class="ph ph-behance-logo text-xl">
+       </i>
+      </a>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="../assets/js/main.js">
+  </script>
+ 
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <i class="ph ph-caret-up"></i>
+  </button>
+ </body>
 </html>
