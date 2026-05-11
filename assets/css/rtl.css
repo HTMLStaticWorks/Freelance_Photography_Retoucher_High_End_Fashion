@@ -22,11 +22,8 @@ html[dir="rtl"] .left-0 {
     right: 0;
 }
 
-/* Fix Phosphor icons rotation */
-html[dir="rtl"] .ph-caret-down {
-    /* carets usually don't need horizontal flip, but maybe some arrows do */
-}
 
+/* Fix Phosphor icons rotation */
 html[dir="rtl"] .ph-arrow-right,
 html[dir="rtl"] .ph-caret-right {
     transform: scaleX(-1);
