@@ -14,9 +14,10 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <script src="https://unpkg.com/@phosphor-icons/web">
   </script>
-   <link href="assets/css/style.css" rel="stylesheet"/>
-   <link href="assets/css/dark-mode.css" rel="stylesheet"/>
-   <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
+    <link href="assets/css/style.css" rel="stylesheet"/>
+    <link href="assets/css/dark-mode.css" rel="stylesheet"/>
+    <link href="assets/css/rtl.css" rel="stylesheet"/>
+    <link href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" rel="icon"/>
  </head>
  <body class="antialiased transition-colors duration-300">
   <!-- Header / Navbar -->
@@ -24,20 +25,20 @@
    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-20">
      <!-- Logo -->
-     <div class="flex-shrink-0 flex items-center">
-       <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
-        <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
-       </a>
-     </div>
+      <div class="flex-shrink-0 flex items-center">
+        <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center group" href="index.html">
+         <span class="logo-bolt me-3 transition-all duration-300">⚡</span>RAW
+        </a>
+      </div>
      <!-- Desktop Menu -->
      <nav class="hidden lg:flex space-x-8 items-center">
        <div class="relative group h-full inline-flex items-center">
         <a class="text-sm nav-link" href="index.html">
          Home
-         <i class="ph ph-caret-down ml-1 text-xs">
+         <i class="ph ph-caret-down ms-1 text-xs">
          </i>
         </a>
-       <div class="absolute top-full left-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+       <div class="absolute top-full start-0 mt-0 w-40 bg-white dark:bg-luxury-900 border border-gray-100 dark:border-gray-800 shadow-xl rounded-b-xl overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
         <a class="flex items-center px-6 py-3 text-sm font-medium hover:bg-gray-50 dark:hover:bg-black transition-colors border-b border-gray-50 dark:border-gray-800 text-black dark:text-gray-300" href="index.html">
          Home 1
         </a>
@@ -73,12 +74,12 @@
        <button class="rtl-toggle text-xs font-bold px-3 py-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-all transform hover:scale-110 active:scale-95">
         RTL
        </button>
-       <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ml-2" href="login.html">
-        Login
-       </a>
-       <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105" href="dashboard.html">
-        Client Portal
-       </a>
+        <a class="bg-black dark:bg-white text-white dark:text-black px-6 py-2 rounded-full text-sm font-bold hover:scale-105 transition-all shadow-md ms-2" href="login.html">
+         Login
+        </a>
+        <a class="bg-black dark:bg-white text-white dark:text-black px-5 py-2 rounded-full text-sm font-medium hover:bg-gray-800 dark:hover:bg-gray-200 transition-all transform hover:scale-105 ms-2" href="dashboard.html">
+         Client Portal
+        </a>
      </div>
      <!-- Mobile Menu Button -->
      <div class="lg:hidden flex items-center space-x-4">
@@ -106,36 +107,36 @@
        Home
       </span>
       <div class="pl-6 space-y-1">
-       <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
-      <i class="ph ph-list mr-2"></i>
-      Home 1
-     </a>
-       <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
-      <i class="ph ph-list mr-2"></i>
-      Home 2
-     </a>
+        <a class="block px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="index.html">
+       <i class="ph ph-list me-2"></i>
+       Home 1
+      </a>
+        <a class="flex items-center px-3 py-2 rounded-md text-xs uppercase tracking-[0.2em] mobile-nav-link" href="home2.html">
+       <i class="ph ph-list me-2"></i>
+       Home 2
+      </a>
       </div>
      </div>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
-      <i class="ph ph-list mr-2"></i>
-      About
-     </a>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="services.html">
-      <i class="ph ph-list mr-2"></i>
-      Services
-     </a>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
-      <i class="ph ph-list mr-2"></i>
-      Fashion
-     </a>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
-      <i class="ph ph-list mr-2"></i>
-      Portfolio
-     </a>
-     <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
-      <i class="ph ph-list mr-2"></i>
-      Contact
-     </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="about.html">
+       <i class="ph ph-list me-2"></i>
+       About
+      </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link active" href="services.html">
+       <i class="ph ph-list me-2"></i>
+       Services
+      </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="niche.html">
+       <i class="ph ph-list me-2"></i>
+       Fashion
+      </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="portfolio.html">
+       <i class="ph ph-list me-2"></i>
+       Portfolio
+      </a>
+      <a class="flex items-center px-3 py-2 rounded-md text-base font-medium mobile-nav-link" href="contact.html">
+       <i class="ph ph-list me-2"></i>
+       Contact
+      </a>
       <div class="border-t border-gray-200 dark:border-gray-700 pt-4 pb-2 space-y-3">
        <a class="block w-full text-center bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-xl text-sm font-bold" href="login.html">
         Login
@@ -294,7 +295,7 @@
       </div>
       <!-- Editorial (Highlighted) -->
       <div class="bg-black text-white dark:bg-white dark:text-black rounded-2xl p-8 transform md:-translate-y-4 shadow-2xl relative" data-aos="fade-up" data-aos-delay="100">
-       <div class="absolute top-0 right-8 transform -translate-y-1/2 bg-white text-black dark:bg-black dark:text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full">
+       <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black dark:bg-black dark:text-white px-4 py-1 text-xs font-bold uppercase tracking-widest rounded-full whitespace-nowrap">
         Popular
        </div>
        <h3 class="font-serif text-2xl mb-2">
@@ -378,32 +379,51 @@
      <h2 class="font-serif text-4xl font-bold mb-12 text-center" data-aos="fade-up">
       Frequently Asked Questions
      </h2>
-     <div class="space-y-4">
-      <!-- FAQ Item -->
-      <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up">
-       <h4 class="font-bold mb-2">
-        What is the typical turnaround time?
-       </h4>
-       <p class="text-sm text-gray-500">
-        For standard and editorial tiers, we deliver within 48-72 hours. Master retouching may take up to 5 days depending on complexity.
-       </p>
-      </div>
-      <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="100">
-       <h4 class="font-bold mb-2">
-        Do you provide bulk discounts?
-       </h4>
-       <p class="text-sm text-gray-500">
-        Yes, we offer custom pricing for lookbooks and e-commerce batches exceeding 50 images per month.
-       </p>
-      </div>
-      <div class="bg-white dark:bg-black rounded-lg p-6 cursor-pointer" data-aos="fade-up" data-aos-delay="200">
-       <h4 class="font-bold mb-2">
-        How do revisions work?
-       </h4>
-       <p class="text-sm text-gray-500">
-        Revisions can be requested directly via our Client Portal dashboard. You can leave pin-point comments on the image itself.
-       </p>
-      </div>
+     <div class="space-y-6">
+      <!-- FAQ Item 1 -->
+       <div class="faq-item bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up">
+
+
+        <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+         <h4 class="font-bold text-lg pr-8 transition-colors group-hover:text-gold-500">
+          What is the typical turnaround time?
+         </h4>
+         <i class="ph ph-plus text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6">
+         <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          For standard and editorial tiers, we deliver within 48-72 hours. Master retouching may take up to 5 days depending on complexity.
+         </p>
+        </div>
+       </div>
+       <!-- FAQ Item 2 -->
+       <div class="faq-item bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+        <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+         <h4 class="font-bold text-lg pr-8 transition-colors group-hover:text-gold-500">
+          Do you provide bulk discounts?
+         </h4>
+         <i class="ph ph-plus text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6">
+         <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          Yes, we offer custom pricing for lookbooks and e-commerce batches exceeding 50 images per month.
+         </p>
+        </div>
+       </div>
+       <!-- FAQ Item 3 -->
+       <div class="faq-item bg-white dark:bg-black rounded-2xl border border-gray-100 dark:border-gray-800 transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+        <button class="w-full flex items-center justify-between p-6 text-left focus:outline-none group">
+         <h4 class="font-bold text-lg pr-8 transition-colors group-hover:text-gold-500">
+          How do revisions work?
+         </h4>
+         <i class="ph ph-plus text-xl transition-transform duration-300"></i>
+        </button>
+        <div class="faq-answer hidden px-6 pb-6">
+         <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+          Revisions can be requested directly via our Client Portal dashboard. You can leave pin-point comments on the image itself.
+         </p>
+        </div>
+       </div>
      </div>
     </div>
    </section>
@@ -416,10 +436,28 @@
        <a class="font-serif text-2xl font-bold tracking-[0.3em] flex items-center mb-6 group" href="index.html">
         <span class="logo-bolt mr-3 transition-all duration-300">⚡</span>RAW
        </a>
-      <p class="text-gray-500 dark:text-gray-400 text-sm max-w-sm">
-       Premium photo retouching and asset management platform for the world's most demanding fashion photographers.
+      <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-sm">
+        Premium photography retouching services<br>
+        tailored for high-end fashion campaigns.<br>
+        Elevating visual narratives with precision,<br>
+        artistry, and technical excellence.
       </p>
-     </div>
+      
+      
+      <div class="flex space-x-4">
+       <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl group">
+        <i class="ph ph-instagram-logo text-xl transition-transform duration-300 group-hover:scale-125"></i>
+       </a>
+       <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl group">
+        <i class="ph ph-facebook-logo text-xl transition-transform duration-300 group-hover:scale-125"></i>
+       </a>
+       <a href="#" class="w-11 h-11 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/10 text-gray-700 dark:text-gray-300 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl group">
+        <i class="ph ph-linkedin-logo text-xl transition-transform duration-300 group-hover:scale-125"></i>
+       </a>
+      </div>
+      
+      
+      </div>
      <div>
       <h5 class="font-bold mb-4 uppercase text-xs tracking-widest">
        Platform
@@ -453,23 +491,28 @@
       </h5>
       <ul class="space-y-3 text-sm text-gray-500 dark:text-gray-400">
        <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="index.html">
+         Home
+        </a>
+       </li>
+       <li>
         <a class="hover:text-black dark:hover:text-white transition-colors" href="about.html">
          About Us
         </a>
        </li>
        <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="niche.html">
+         Fashion
+        </a>
+       </li>
+       <li>
+        <a class="hover:text-black dark:hover:text-white transition-colors" href="portfolio.html">
+         Portfolio
+        </a>
+       </li>
+       <li>
         <a class="hover:text-black dark:hover:text-white transition-colors" href="contact.html">
          Contact
-        </a>
-       </li>
-       <li>
-        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
-         Privacy Policy
-        </a>
-       </li>
-       <li>
-        <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
-         Terms of Service
         </a>
        </li>
       </ul>
@@ -479,20 +522,7 @@
      <p>
       © 2026 RAW. All rights reserved.
      </p>
-     <div class="flex space-x-6 mt-4 md:mt-0">
-      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
-       <i class="ph ph-instagram-logo text-xl">
-       </i>
-      </a>
-      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
-       <i class="ph ph-twitter-logo text-xl">
-       </i>
-      </a>
-      <a class="hover:text-black dark:hover:text-white transition-colors" href="#">
-       <i class="ph ph-behance-logo text-xl">
-       </i>
-      </a>
-     </div>
+     
     </div>
    </div>
   </footer>
@@ -500,9 +530,44 @@
   </script>
   <script src="assets/js/main.js">
   </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const faqItems = document.querySelectorAll('.faq-item');
+      
+      faqItems.forEach(item => {
+        const button = item.querySelector('button');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.ph-plus');
+        
+        button.addEventListener('click', () => {
+          const isOpen = !answer.classList.contains('hidden');
+          
+          // Close all other items
+          faqItems.forEach(otherItem => {
+            if (otherItem !== item) {
+              otherItem.querySelector('.faq-answer').classList.add('hidden');
+              otherItem.querySelector('i').classList.replace('ph-minus', 'ph-plus');
+              otherItem.classList.remove('border-gold-400/30');
+            }
+          });
+          
+          // Toggle current item
+          answer.classList.toggle('hidden');
+          if (!isOpen) {
+            icon.classList.replace('ph-plus', 'ph-minus');
+            item.classList.add('border-gold-400/30');
+          } else {
+            icon.classList.replace('ph-minus', 'ph-plus');
+            item.classList.remove('border-gold-400/30');
+          }
+        });
+      });
+    });
+  </script>
  
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">
     <i class="ph ph-caret-up"></i>
   </button>
  </body>
 </html>
+

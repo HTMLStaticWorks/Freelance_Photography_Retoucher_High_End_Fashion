@@ -65,7 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
     rtlToggles.forEach(btn => {
         btn.addEventListener("click", () => {
             const html = document.documentElement;
-            html.dir = html.dir === "rtl" ? "ltr" : "rtl";
+            const newDir = html.dir === "rtl" ? "ltr" : "rtl";
+            html.dir = newDir;
+            
+            // Update all RTL toggle buttons text
+            rtlToggles.forEach(toggle => {
+                toggle.innerText = newDir === "rtl" ? "LTR" : "RTL";
+            });
         });
     });
 

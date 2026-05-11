@@ -55,6 +55,16 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+#navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark #navbar.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
 .text-balance {
   text-wrap: balance;
 }
@@ -118,6 +128,9 @@ a:hover .logo-bolt {
 .nav-link {
   position: relative;
   transition: all 0.3s ease;
+  color: #444;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .nav-link::after {
@@ -129,7 +142,7 @@ a:hover .logo-bolt {
   left: 0;
   background-color: currentColor;
   transition: width 0.3s ease;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .nav-link:hover::after,
@@ -138,20 +151,24 @@ a:hover .logo-bolt {
 }
 
 .nav-link.active {
-  color: black !important;
+  color: #000 !important;
   font-weight: 700;
 }
 
 .dark .nav-link.active {
-  color: white !important;
+  color: #fff !important;
 }
 
 .nav-link:hover {
-  color: #666;
+  color: #000;
+}
+
+.dark .nav-link {
+  color: #aaa;
 }
 
 .dark .nav-link:hover {
-  color: #ccc;
+  color: #fff;
 }
 
 .dropdown-active {
@@ -165,12 +182,13 @@ a:hover .logo-bolt {
 
 /* Mobile Nav Styles */
 .mobile-nav-link {
-  color: #666;
+  color: #444;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .dark .mobile-nav-link {
-  color: #aaa;
+  color: #bbb;
 }
 
 .mobile-nav-link:hover {
@@ -243,4 +261,52 @@ a:hover .logo-bolt {
 .dark .back-to-top:hover {
   background: white;
   color: black;
+}
+
+/* iPad Pro (1024px) Navigation Optimization */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  header .max-w-7xl {
+    max-width: 100% !important;
+    padding-inline-start: 1.5rem !important;
+    padding-inline-end: 1.5rem !important;
+  }
+  
+  nav.lg\:flex {
+    gap: 1.25rem !important;
+    display: flex !important;
+  }
+  
+  nav.lg\:flex > * {
+    margin: 0 !important; /* Kill all Tailwind space-x margins */
+  }
+  
+  .lg\:flex.items-center.space-x-4 {
+    gap: 0.75rem !important;
+    display: flex !important;
+  }
+  
+  .lg\:flex.items-center.space-x-4 > * {
+    margin: 0 !important; /* Kill all Tailwind space-x margins */
+  }
+  
+  .nav-link {
+    font-size: 13px !important;
+    letter-spacing: 0.01em !important;
+    white-space: nowrap !important;
+  }
+  
+  .lg\:flex .px-6 {
+    padding-inline-start: 1rem !important;
+    padding-inline-end: 1rem !important;
+  }
+  
+  .lg\:flex .px-5 {
+    padding-inline-start: 0.75rem !important;
+    padding-inline-end: 0.75rem !important;
+  }
+
+  /* Ensure logo stays consistent */
+  header .text-2xl {
+    font-size: 1.25rem !important;
+  }
 }

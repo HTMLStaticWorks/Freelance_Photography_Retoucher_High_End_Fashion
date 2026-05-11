@@ -2,11 +2,83 @@
 html[dir="rtl"] {
     text-align: right;
 }
-html[dir="rtl"] .ml-auto {
-    margin-right: auto;
-    margin-left: 0;
+
+/* Fix Tailwind space-x for RTL */
+html[dir="rtl"] [class*="space-x-"] > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 1;
 }
-html[dir="rtl"] .mr-4 {
-    margin-left: 1rem;
-    margin-right: 0;
+
+/* Logical alignment overrides */
+html[dir="rtl"] .text-left {
+    text-align: right;
 }
+html[dir="rtl"] .text-right {
+    text-align: left;
+}
+
+/* Fix dropdown positioning */
+html[dir="rtl"] .left-0 {
+    left: auto;
+    right: 0;
+}
+
+/* Fix Phosphor icons rotation */
+html[dir="rtl"] .ph-caret-down {
+    /* carets usually don't need horizontal flip, but maybe some arrows do */
+}
+
+html[dir="rtl"] .ph-arrow-right,
+html[dir="rtl"] .ph-caret-right {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .ph-arrow-left,
+html[dir="rtl"] .ph-caret-left {
+    transform: scaleX(-1);
+}
+
+/* Custom logo bolt adjustment */
+html[dir="rtl"] .logo-bolt {
+    margin-right: 0 !important;
+    margin-left: 0.75rem !important;
+}
+
+/* Sidebar RTL fixes */
+html[dir="rtl"] #dashboard-sidebar {
+    right: 0;
+    left: auto;
+    border-right-width: 0;
+    border-left-width: 1px;
+}
+
+html[dir="rtl"] .-translate-x-full {
+    transform: translateX(100%);
+}
+
+html[dir="rtl"] .translate-x-0 {
+    transform: translateX(0);
+}
+
+/* Hotspot fixes for home2.html */
+html[dir="rtl"] .hotspot .absolute.start-full {
+    left: auto;
+    right: 100%;
+}
+
+html[dir="rtl"] .hotspot .absolute.end-full {
+    right: auto;
+    left: 100%;
+}
+
+html[dir="rtl"] .hotspot .transform.translate-x-4 {
+    transform: translateX(-1rem) translateY(-50%);
+}
+
+html[dir="rtl"] .hotspot .transform.-translate-x-4 {
+    transform: translateX(1rem) translateY(-50%);
+}
+
+html[dir="rtl"] .hotspot .group-hover\:translate-x-0 {
+    transform: translateX(0) translateY(-50%);
+}
+
