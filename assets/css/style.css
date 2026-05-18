@@ -263,6 +263,13 @@ a:hover .logo-bolt {
   color: black;
 }
 
+/* Desktop Navigation Dropdown Alignment & Hover Stability */
+@media (min-width: 1024px) {
+  header nav {
+    height: 100% !important;
+  }
+}
+
 /* iPad Pro (1024px) Navigation Optimization */
 @media (min-width: 1024px) and (max-width: 1280px) {
   header .max-w-7xl {
