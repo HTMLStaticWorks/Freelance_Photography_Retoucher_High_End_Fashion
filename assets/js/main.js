@@ -121,4 +121,50 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // 8. Touch Dropdown Support for Tablets (like iPad Pro) & Mobile viewports
+    if (window.matchMedia("(pointer: coarse)").matches) {
+        const navDropdowns = document.querySelectorAll("nav .relative.group");
+        
+        navDropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector("a.nav-link");
+            const menu = dropdown.querySelector(".absolute");
+            
+            if (trigger && menu) {
+                // Prevent navigation on touch and toggle the menu
+                trigger.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isOpen = menu.style.opacity === "1";
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll("nav .relative.group .absolute").forEach(otherMenu => {
+                        if (otherMenu !== menu) {
+                            otherMenu.style.opacity = "";
+                            otherMenu.style.visibility = "";
+                        }
+                    });
+                    
+                    if (isOpen) {
+                        menu.style.opacity = "";
+                        menu.style.visibility = "";
+                    } else {
+                        menu.style.opacity = "1";
+                        menu.style.visibility = "visible";
+                    }
+                });
+            }
+        });
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest("nav .relative.group")) {
+                document.querySelectorAll("nav .relative.group .absolute").forEach(menu => {
+                    menu.style.opacity = "";
+                    menu.style.visibility = "";
+                });
+            }
+        });
+    }
 });
